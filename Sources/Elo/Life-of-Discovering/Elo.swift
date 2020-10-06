@@ -12,7 +12,7 @@ protocol IsList {
         get
     }
 }
-typealias EloSet = Array
+public typealias EloSet = Array
 protocol IsSet {
     var elements: EloSet<Text> {
         get

@@ -32,12 +32,13 @@ extension Indicator {
     }
 }
 
-protocol Operable {
+public protocol Operable {
     var handler: EloSet<IndividualAble> {
         get
     }
 }
-protocol IndividualAble {}
+
+public protocol IndividualAble {}
 
 protocol IndArchitectural {
     var multiThreading: Int {

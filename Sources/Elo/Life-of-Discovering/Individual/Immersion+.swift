@@ -8,7 +8,7 @@
 import Elo_Itself
 
 public enum Brain_Body_Condition: Immersion, Operable {
-    var handler: EloSet<IndividualAble> {
+    public var handler: EloSet<IndividualAble> {
         var tmp = EloSet<IndividualAble>()
         tmp.append(Sleep())
         return tmp
