@@ -14,6 +14,13 @@ public enum Brain_Body_Condition: Immersion, Operable {
         return tmp
     }
     
+    public var saving: [String] {
+        var tmp = [String]()
+        tmp.append("Loose Eyeglasses")
+        tmp.append("Loose Headphone")
+        return tmp
+    }
+    
     case Full
     case Poor
 }
