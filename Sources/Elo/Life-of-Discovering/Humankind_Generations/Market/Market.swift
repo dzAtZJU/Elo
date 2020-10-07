@@ -7,9 +7,7 @@
 //
 import Elo_Itself
 
-protocol MarketMember {
-    
-}
+public protocol MarketMember {}
 
 protocol Market {
     var resources: EloSet<MarketMember> {
