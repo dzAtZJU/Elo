@@ -6,9 +6,7 @@
 //  Copyright © 2020 Paper Scratch. All rights reserved.
 //
 
-protocol Resource: MarketMember {
-    
-}
+public protocol Resource: MarketMember {}
 
 struct Hoodie: Resource {
 }
