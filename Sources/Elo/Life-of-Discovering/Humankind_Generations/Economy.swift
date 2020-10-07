@@ -24,8 +24,13 @@ struct Economy: Operable {
     
     struct Seek: IndividualAble {}
     struct Filter: IndividualAble {}
-    struct Build_NewEconomy: IndividualAble {}
+    struct Build_NewEconomy: IndividualAble {
+        var technique = "Emotion_Drive"
+    }
     struct Emigrate_to_AnotherEconomy: IndividualAble {}
     struct Entrepreneurship: IndividualAble {}
+    
+    // Start, Study, Live in US, Japan Market
+    // Only Make money in China-Mainland Market while wearing mask
 }
 

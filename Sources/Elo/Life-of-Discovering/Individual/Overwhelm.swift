@@ -26,8 +26,9 @@ extension Sleep: SelfCare {
 struct Intimate_Interaction: Overwhelm {
     var drives: [SelfCare] = [SkinCare()]
     
-    struct SkinCare: SelfCare {
+    struct SkinCare: SelfCare, TimePocket {
         var perspective: Perspective? = Intimate_One()
+        var insertingTask: Task = Watch_Politics_at_Youtube()
     }
 }
 

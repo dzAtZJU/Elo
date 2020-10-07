@@ -7,12 +7,21 @@
 //
 import Elo_Itself
 
-protocol Adventure: MarketMember {
-    
-}
+protocol Adventure: MarketMember {}
 
-struct EF_日语游学: Adventure {
+struct Cat_Cafe: Adventure, IndividualAble {}
+
+struct Bedroom: Adventure, MicroEnvironment, IndividualAble {}
+
+struct WeWork: Adventure, MicroEnvironment {}
+
+struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
+    var publicServices: [PublicService] = [Walkscore(), GlobalRentComparison()]
     
+    var efficiency: Efficiency = .terrible
+    
+    struct Walkscore: PublicService {}
+    struct GlobalRentComparison: PublicService {}
 }
 
 struct Adventure_in_City: Market {
@@ -28,4 +37,6 @@ struct Adventure_in_City: Market {
     }()
     
     var efficiency = Efficiency.ok
+    
+    struct EF_日语游学: Adventure {}
 }

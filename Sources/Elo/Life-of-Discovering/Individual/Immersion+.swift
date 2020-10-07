@@ -36,6 +36,8 @@ struct Sense_of_Security: Immersion, Require_Intimacy {
     }()
     
     var efficiency = Efficiency.terrible
+    
+    struct Dark: Adventure, MicroEnvironment {}
 }
 
 struct Sense_of_Intimacy: Immersion, Require_Intimacy {
@@ -54,3 +56,5 @@ struct Sense_of_Intimacy: Immersion, Require_Intimacy {
     
     var efficiency = Efficiency.terrible
 }
+
+protocol MicroEnvironment {}

@@ -32,15 +32,27 @@ struct CirclePopularWill_Statistics: Reflect_EverlastingValue, Require_PublicSer
     
     struct Appannie: PublicService {}
     struct Sumally: PublicService {}
+}
+
+struct Words_WidelyKnown_Rank_Managing: Require_PublicService, Has_Drawbacks, Architectural {
+    var drawbacks: EloSet<String> = {
+        var tmp = EloSet<String>()
+        tmp.append("Plagued by ill-tasted meaning and hypocritical product/service")
+        tmp.append("Popular-will is obstructed or wasted")
+        tmp.append("Myopic")
+        tmp.append("Floating")
+        tmp.append("Abused")
+        tmp.append("Illusory")
+        tmp.append("Individual's Time is Abused")
+        return tmp
+    }()
+    
+    var publicServices: [PublicService] = {
+        var tmp = [PublicService]()
+        return tmp
+    }()
+    
+    var efficiency: Efficiency = .terrible
     
     // Scientific_Public_World_built_by_Public_Language_built_from_Science
-    // Emotion_Drive_Technique
-    // Keyword is plagued by ill-tasted meaning and hypocritical product/service
-    // Popular-will is obstructed or wasted
-    
-    // Start, Study, Live in US, Japan Market
-    
-    // Only Make money in China-Mainland Market while wearing mask
-    
-    // Rank is resource. Well-Known is resource
 }

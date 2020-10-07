@@ -11,8 +11,6 @@ struct Life_of_Discovering: IsBattle {
     
     var blue: [Force] = [Drowsiness(), Intimate_Interaction()]
     
-    let name = "Life_of_Discovering"
-    
     var immersions: [Immersion] = {
         var tmp = [Immersion]()
         return tmp

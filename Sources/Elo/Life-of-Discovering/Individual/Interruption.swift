@@ -63,6 +63,18 @@ struct Sleep: IndividualAble {
         tmp.append(Waist_Cushion())
         return tmp
     }()
+    
+    var interruptions: [Text] = {
+        var tmp = [Text]()
+        tmp.append(Mosquito())
+        tmp.append(Stomach())
+        tmp.append(Urinate_and_Defecate())
+        return tmp
+    }()
+    
+    struct Mosquito: Text {}
+    struct Stomach: Text {}
+    struct Urinate_and_Defecate: Text {}
 }
 
 struct Anxious: Indicator, Operable, Architectural {
@@ -126,6 +138,4 @@ struct Negate_Self: Proper, Operable {
         tmp.append(Cat_Cafe())
         return tmp
     }()
-    
-    struct Watch_Politics_at_Youtube: IndividualAble {}
 }

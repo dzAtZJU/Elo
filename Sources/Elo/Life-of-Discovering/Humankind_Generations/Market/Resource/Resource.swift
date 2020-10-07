@@ -32,7 +32,7 @@ struct ReedDiffuser: Resource {
 struct Pillow: Resource, Has_Criterias, Operable {
     var criterias: EloSet<String> = {
         var tmp = EloSet<String>()
-        tmp.append(Fit_and_Soft_and_Support_and_Tender().name)
+        tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
     
@@ -50,12 +50,12 @@ struct Pillow: Resource, Has_Criterias, Operable {
 struct Mattress: Resource, Has_Criterias {
     var criterias: EloSet<String> = {
         var tmp = EloSet<String>()
-        tmp.append(Fit_and_Soft_and_Support_and_Tender().name)
+        tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
 }
-struct Fit_and_Soft_and_Support_and_Tender {
-    var name = "Fit_and_Soft_and_Support_and_Tender"
+struct SoftFit_and_FullTenderSupport {
+    var name = "SoftFit_and_FullTenderSupport"
 }
 
 struct Air_Conditioning: Resource, Has_Criterias {
@@ -69,3 +69,5 @@ struct Air_Conditioning: Resource, Has_Criterias {
 struct Waist_Cushion: Resource {}
 
 struct Coffee: Resource, IndividualAble {}
+
+struct Long_Acting_Drug: Resource, MicroEnvironment {}

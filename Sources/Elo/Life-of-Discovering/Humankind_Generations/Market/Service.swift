@@ -7,3 +7,4 @@ struct Servant: Service, Has_Criterias {
         return tmp
     }
 }
+

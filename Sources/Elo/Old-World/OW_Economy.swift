@@ -10,23 +10,6 @@ enum Old_World {
         let a = "most Unimaginative"
         let b = "most Impersonal"
     }
-    
-    struct 信息需求 {
-        let a = "Myopic"
-        let b = "Floating"
-        let c = "Abused"
-        let d = "Illusory"
-        let e = "Individual's Time is Abused"
-    }
-    
-    enum ContentManagement {
-        case Locating
-        case Discovering(Discovering)
-    }
-
-    enum Discovering {
-        case Market
-    }
 }
 
 extension Old_World {
