@@ -7,7 +7,7 @@
 
 import Elo_Itself
 
-protocol TimePocket {
+public protocol TimePocket {
     var insertingTask: Task {
         get
     }
