@@ -26,3 +26,5 @@ struct Uniqueness: Self_Belief {
         approaches
     }
 }
+
+struct Sincere_and_Pride: Self_Belief {}
