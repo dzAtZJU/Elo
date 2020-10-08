@@ -8,7 +8,7 @@
 import Elo_Itself
 
 public protocol TimePocket {
-    var insertingTask: Task {
+    var insertingTasks: [Task] {
         get
     }
 }
@@ -24,8 +24,15 @@ struct LongHoursWorking: Task {
 }
 
 struct Watch_Politics_at_Youtube: Task, IndividualAble {}
+public struct Duolingo: Task, IndividualAble {}
 
 struct On_the_Go: TimePocket {
-    var insertingTask: Task = Watch_Politics_at_Youtube()
+    var insertingTasks: [Task] = {
+        var tmp = [Task]()
+        tmp.append(Duolingo())
+        tmp.append(Watch_Politics_at_Youtube())
+        return tmp
+        
+    }()
 }
 

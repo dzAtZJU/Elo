@@ -28,7 +28,7 @@ struct Intimate_Interaction: Overwhelm {
     
     struct SkinCare: SelfCare, TimePocket {
         var perspective: Perspective? = Intimate_One()
-        var insertingTask: Task = Watch_Politics_at_Youtube()
+        var insertingTasks: [Task] = [Watch_Politics_at_Youtube()]
     }
 }
 
