@@ -9,7 +9,7 @@
 struct Life_of_Discovering: IsBattle {
     var red: [Force] = [Track()]
     
-    var blue: [Force] = [Drowsiness(), Intimate_Interaction()]
+    var blue: [Force] = [Drowsiness(), Intimate_One()]
     
     var immersions: [Immersion] = {
         var tmp = [Immersion]()

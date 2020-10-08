@@ -45,10 +45,12 @@ struct Elo: Symbiont {
     var flows: [Indicator] = []
 }
 
-struct Intimate_One: Symbiont, Perspective {
-    var obstacles: [String] = ["The possibility of partner leaving drive us to please"]
+public struct Intimate_One: Symbiont, Perspective, Task {
+    public init() {}
     
-    var semantic_product: String? = "Social Skill"
+    public var obstacles: [String] = ["The possibility of partner leaving drive us to please"]
+    
+    public var semantic_product: String? = "Social Skill"
     
     var flows: [Indicator] = [Anxious()]
 }
