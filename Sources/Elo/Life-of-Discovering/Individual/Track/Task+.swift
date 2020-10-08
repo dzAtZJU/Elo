@@ -24,7 +24,9 @@ struct LongHoursWorking: Task {
 }
 
 struct Watch_Politics_at_Youtube: Task, IndividualAble {}
-public struct Duolingo: Task, IndividualAble {}
+public struct Duolingo: Task, IndividualAble {
+    public init() {}
+}
 
 struct On_the_Go: TimePocket {
     var insertingTasks: [Task] = {
