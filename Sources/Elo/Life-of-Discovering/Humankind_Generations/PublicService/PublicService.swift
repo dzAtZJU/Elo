@@ -34,9 +34,10 @@ struct CirclePopularWill_Statistics: Reflect_EverlastingValue, Require_PublicSer
     struct Sumally: PublicService {}
 }
 
-struct Words_WidelyKnown_Rank_Managing: Require_PublicService, Has_Drawbacks, Architectural {
-    var drawbacks: EloSet<String> = {
-        var tmp = EloSet<String>()
+protocol Popular_Connectoin: PublicService, Has_Drawbacks {}
+extension Popular_Connectoin {
+    public var drawbacks: [String] {
+        var tmp = [String]()
         tmp.append("Plagued by ill-tasted meaning and hypocritical product/service")
         tmp.append("Popular-will is obstructed or wasted")
         tmp.append("Myopic")
@@ -45,10 +46,38 @@ struct Words_WidelyKnown_Rank_Managing: Require_PublicService, Has_Drawbacks, Ar
         tmp.append("Illusory")
         tmp.append("Individual's Time is Abused")
         return tmp
+    }
+}
+
+public struct Concept: Popular_Connectoin, Has_Tasks {
+    public init() {}
+    public  var tasks: [Task] = {
+        var tmp = [Task]()
+        tmp.append(CheckConnection())
+        tmp.append(AskForMethod())
+        tmp.append(RefineMethod())
+        return tmp
     }()
     
+    public struct CheckConnection: Task {}
+    public struct AskForMethod: Task {}
+    public struct RefineMethod: Task {}
+}
+
+struct WidelyKnown: Popular_Connectoin {}
+
+struct Rank: Popular_Connectoin {}
+
+struct Hall: Popular_Connectoin {}
+
+struct Dictionary: Popular_Connectoin {}
+
+struct Popular_Net: Require_PublicService {
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
+        tmp.append(Concept())
+        tmp.append(WidelyKnown())
+        tmp.append(Rank())
         return tmp
     }()
     

@@ -20,7 +20,7 @@ protocol IsBattle {
 }
 
 protocol Has_Weapon {
-    var weapons: EloSet<Text> {
+    var weapons: [Text] {
         get
     }
 }
@@ -30,38 +30,38 @@ protocol Way_Of_Thinking {}
 protocol Constraint: Force {}
 
 protocol Craftsman {
-    var repair: EloSet<Tool> {
+    var repair: [Tool] {
         get
     }
     
-    var constrained_by: EloSet<Tool> {
+    var constrained_by: [Tool] {
         get
     }
 }
 
 struct Track: Proper, Craftsman, Force {
-    var elements: EloSet<Text> = {
-        var tmp = EloSet<Text>()
+    var elements: [Text] = {
+        var tmp = [Text]()
         tmp.append(Follow_Current_Minor_Feeling())
         return tmp
     }()
 
     var destination = "Build new knowledge of life discovering"
 
-    var repair: EloSet<Tool> = {
-        var tmp = EloSet<Tool>()
+    var repair: [Tool] = {
+        var tmp = [Tool]()
         tmp.append(Line_of_Thought())
         return tmp
     }()
     
-    var constrained_by: EloSet<Tool> {
+    var constrained_by: [Tool] {
         repair
     }
 }
 
 struct Follow_Current_Minor_Feeling: Proper {
-    var elements: EloSet<Indicator> = {
-        var tmp = EloSet<Indicator>()
+    var elements: [Indicator] = {
+        var tmp = [Indicator]()
         tmp.append(Creative_Desire())
         tmp.append(Repulsion())
         tmp.append(DeadLocking())
@@ -82,8 +82,8 @@ struct DeadLocking: Indicator, Operable, Require_PublicService {
     
     var efficiency = Efficiency.terrible
     
-    var handler: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    var handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(Dormant())
         return tmp
     }()

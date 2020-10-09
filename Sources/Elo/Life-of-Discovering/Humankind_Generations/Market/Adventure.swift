@@ -25,13 +25,13 @@ struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
 }
 
 struct Adventure_in_City: Market {
-    var criterias: EloSet<String> = {
-        var tmp = EloSet<String>()
+    var criterias: [String] = {
+        var tmp = [String]()
         return tmp
     }()
     
-    var resources: EloSet<MarketMember> = {
-        var tmp = EloSet<Adventure>()
+    var resources: [MarketMember] = {
+        var tmp = [MarketMember]()
         tmp.append(EF_日语游学())
         return tmp
     }()

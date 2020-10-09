@@ -14,14 +14,14 @@ enum Old_World {
 
 extension Old_World {
     struct Market: Proper, Economy_Participant {
-        var visualAngles: EloSet<VisualAngle> = {
-            var tmp = EloSet<VisualAngle>()
+        var visualAngles: [VisualAngle] = {
+            var tmp = [VisualAngle]()
             tmp.append(MassMedia())
             return tmp
         }()
         
-        var segmentations: EloSet<MarketSegmentation> = {
-            var tmp = EloSet<MarketSegmentation>()
+        var segmentations: [MarketSegmentation] = {
+            var tmp = [MarketSegmentation]()
             tmp.append(ToI())
             tmp.append(独居成年人())
             return tmp

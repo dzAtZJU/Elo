@@ -1,3 +1,5 @@
+import Elo_Itself
+
 struct Trade_Port {
     var weak_moments: [String] = {
         var tmp = [String]()
@@ -10,4 +12,4 @@ struct Trade_Port {
     var vent_frustration = Vent_Frustration()
 }
 
-struct Vent_Frustration {}
+struct Vent_Frustration: SymbiosisAble {}

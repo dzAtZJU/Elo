@@ -6,6 +6,8 @@
 //  Copyright © 2020 Paper Scratch. All rights reserved.
 //
 
+import Elo_Itself
+
 struct Life_of_Discovering: IsBattle {
     var red: [Force] = [Track()]
     
@@ -29,14 +31,6 @@ extension Indicator {
         nil
     }
 }
-
-public protocol Operable {
-    var handler: EloSet<IndividualAble> {
-        get
-    }
-}
-
-public protocol IndividualAble {}
 
 protocol IndArchitectural {
     var multiThreading: Int {

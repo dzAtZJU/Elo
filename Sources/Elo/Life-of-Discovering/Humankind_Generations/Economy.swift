@@ -12,8 +12,8 @@ struct Economy: Operable {
     var circuitry = Circuitry()
     var cost = Cost(money: .terrible, efforts: .terrible)
     
-    var handler: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    var handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(Seek())
         tmp.append(Filter())
         tmp.append(Build_NewEconomy())

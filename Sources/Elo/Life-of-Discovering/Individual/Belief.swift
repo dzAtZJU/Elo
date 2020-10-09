@@ -21,8 +21,8 @@ struct Resilience: Self_Belief {}
 
 struct Uniqueness: Self_Belief {
     var Starting_Point = "iOS-Swift-Development"
-    var approaches: EloSet<Approach> = [Comparative(), Semantic_Discrimination()]
-    var weakness: EloSet<Approach> {
+    var approaches: [Approach] = [Organize_as_Tree(), Comparative(), Semantic_Discrimination()]
+    var weakness: [Approach] {
         approaches
     }
 }

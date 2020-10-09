@@ -7,9 +7,9 @@
 //
 import Elo_Itself
 
-struct Interruptions: IsSet {
-    var elements: EloSet<Text> = {
-        var tmp = EloSet<Text>()
+struct Interruptions {
+    var elements: [Text] = {
+        var tmp = [Text]()
         tmp.append(Anxious())
         tmp.append(Curious())
         tmp.append(Negate_Self())
@@ -80,8 +80,8 @@ struct Sleep: IndividualAble {
 struct Anxious: Indicator, Operable, Architectural {
     var indicates: Proper? = Unknown_by_Thinking()
     
-    let avoidance: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    let avoidance: [IndividualAble] = {
+        var tmp = [IndividualAble]()
         tmp.append(Bedroom())
         tmp.append(Sleep())
         return tmp
@@ -89,8 +89,8 @@ struct Anxious: Indicator, Operable, Architectural {
     
     let throughput = Throughput(max: 1)
     
-    let handler: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    let handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(DeepBreath())
         tmp.append(Drown_In_Content())
         tmp.append(Coffee())
@@ -102,7 +102,7 @@ struct Anxious: Indicator, Operable, Architectural {
     }()
 }
 
-struct Sail_out: IndividualAble {
+struct Sail_out: SymbiosisAble {
     var item: [String] = {
         var tmp = [String]()
         tmp.append("Turn to Intimate one")
@@ -111,9 +111,7 @@ struct Sail_out: IndividualAble {
     }()
 }
 
-struct Give_Up: IndividualAble {
-    
-}
+struct Give_Up: IndividualAble {}
 
 struct Curious: Proper, Require_Markets, Operable {
     var markets: [Market] = {
@@ -123,16 +121,16 @@ struct Curious: Proper, Require_Markets, Operable {
         return tmp
     }()
     
-    var handler: Array<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    var handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(Give_Up())
         return tmp
     }()
 }
 
 struct Negate_Self: Proper, Operable {
-    var handler: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    var handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(Watch_Politics_at_Youtube())
         tmp.append(Dormant())
         tmp.append(Cat_Cafe())

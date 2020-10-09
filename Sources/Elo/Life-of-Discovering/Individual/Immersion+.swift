@@ -8,8 +8,8 @@
 import Elo_Itself
 
 public enum Brain_Body_Condition: Immersion, Operable {
-    public var handler: EloSet<IndividualAble> {
-        var tmp = EloSet<IndividualAble>()
+    public var handler: [Task] {
+        var tmp = [Task]()
         tmp.append(Sleep())
         return tmp
     }
@@ -26,8 +26,8 @@ public enum Brain_Body_Condition: Immersion, Operable {
 }
 
 struct Sense_of_Security: Immersion, Require_Intimacy {
-    var mockings: EloSet<MarketMember> = {
-        var tmp = EloSet<MarketMember>()
+    var mockings: [MarketMember] = {
+        var tmp = [MarketMember]()
         tmp.append(Hoodie())
         tmp.append(BeachHouse())
         tmp.append(Dark())
@@ -48,8 +48,8 @@ struct Sense_of_Security: Immersion, Require_Intimacy {
 }
 
 struct Sense_of_Intimacy: Immersion, Require_Intimacy {
-    var mockings: EloSet<MarketMember> = {
-        var tmp = EloSet<MarketMember>()
+    var mockings: [MarketMember] = {
+        var tmp = [MarketMember]()
         tmp.append(ThrowPillow())
         tmp.append(Cat_Cafe())
         return tmp

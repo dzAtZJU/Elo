@@ -7,6 +7,12 @@
 
 import Elo_Itself
 
+protocol Mockable: Text {
+    var mockings: [MarketMember] {
+        get
+    }
+}
+
 public protocol TimePocket {
     var insertingTasks: [Task] {
         get
@@ -23,11 +29,6 @@ struct LongHoursWorking: Task {
     }()
 }
 
-struct Watch_Politics_at_Youtube: Task, IndividualAble {}
-public struct Duolingo: Task, IndividualAble {
-    public init() {}
-}
-
 struct On_the_Go: TimePocket {
     var insertingTasks: [Task] = {
         var tmp = [Task]()
@@ -38,3 +39,7 @@ struct On_the_Go: TimePocket {
     }()
 }
 
+struct Watch_Politics_at_Youtube: IndividualAble {}
+public struct Duolingo: IndividualAble {
+    public init() {}
+}

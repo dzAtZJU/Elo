@@ -7,13 +7,11 @@
 //
 import Elo_Itself
 
-protocol Content: Resource, Has_Criterias {
-    
-}
+protocol Content: Resource, Has_Criterias {}
 
 extension Content {
-    var criterias: EloSet<String> {
-        var tmp = EloSet<String>()
+    var criterias: [String] {
+        var tmp = [String]()
         tmp.append("Closeness and Immediacy over attractiveness")
         tmp.append("Sincerity")
         tmp.append("Emotion")
@@ -32,8 +30,8 @@ struct knowledge_dot_ca: Content {
 }
 
 struct Content_from_Finland: Content {
-    var elements: EloSet<String> = {
-        var tmp = EloSet<String>()
+    var elements: [String] = {
+        var tmp = [String]()
         tmp.append("www.visitfinland.com")
         tmp.append("finland.fi")
         tmp.append("a man without past")
@@ -42,8 +40,8 @@ struct Content_from_Finland: Content {
 }
 
 struct Content_about_City: Market {
-    var resources: EloSet<MarketMember> = {
-        var tmp = EloSet<Resource>()
+    var resources: [MarketMember] = {
+        var tmp = [Resource]()
         tmp.append(knowledge_dot_ca())
         tmp.append(Content_from_Finland())
         return tmp

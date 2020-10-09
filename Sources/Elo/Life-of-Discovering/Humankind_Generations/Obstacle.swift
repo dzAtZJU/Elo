@@ -5,6 +5,8 @@
 //  Created by Zhou Wei Ran on 2020/9/23.
 //  Copyright © 2020 Paper Scratch. All rights reserved.
 //
+import Elo_Itself
+
 protocol Reflect_EverlastingValue {}
 
 protocol Phenomena {
@@ -12,11 +14,6 @@ protocol Phenomena {
         get
     }
 }
-
-protocol Humankindable {
-    
-}
-
 
 struct Unknown_by_Thinking: Proper, Phenomena {
     var humankindable: Humankindable = PlaceHolder()

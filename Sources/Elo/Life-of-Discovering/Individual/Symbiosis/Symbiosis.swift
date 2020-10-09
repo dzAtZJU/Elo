@@ -18,8 +18,6 @@ protocol Symbiont: Plant, Require_Detach_and_Witness {
         get
     }
 }
-protocol Plant {}
-
 
 struct Dream: Symbiont {
     var flows: [Indicator] = []
@@ -57,8 +55,11 @@ public struct Intimate_One: Symbiont, Perspective, Task {
 
 protocol Require_Intimacy: Mockable, Require_PublicService {}
 
-protocol Mockable: Text {
-    var mockings: EloSet<MarketMember> {
-        get
+extension Life_of_Discovering: In_Symbiosis {
+    var symbionts: [Symbiont] {
+        [Elo(),
+         Dream(),
+         Life_of_SideProject(),
+         Intimate_One()]
     }
 }

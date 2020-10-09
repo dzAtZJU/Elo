@@ -5,6 +5,7 @@
 //  Created by Zhou Wei Ran on 2020/9/22.
 //  Copyright © 2020 Paper Scratch. All rights reserved.
 //
+import Elo_Itself
 
 public protocol Resource: MarketMember {}
 
@@ -28,14 +29,14 @@ struct ReedDiffuser: Resource {
 }
 
 struct Pillow: Resource, Has_Criterias, Operable {
-    var criterias: EloSet<String> = {
-        var tmp = EloSet<String>()
+    var criterias:  [String] = {
+        var tmp =  [String]()
         tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
     
-    var handler: EloSet<IndividualAble> = {
-        var tmp = EloSet<IndividualAble>()
+    var handler: [Task] = {
+        var tmp = [Task]()
         tmp.append(肩也要枕())
         tmp.append(小腹肌肉())
         return tmp
@@ -46,8 +47,8 @@ struct Pillow: Resource, Has_Criterias, Operable {
 }
 
 struct Mattress: Resource, Has_Criterias {
-    var criterias: EloSet<String> = {
-        var tmp = EloSet<String>()
+    var criterias: [String] = {
+        var tmp = [String]()
         tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
@@ -57,8 +58,8 @@ struct SoftFit_and_FullTenderSupport {
 }
 
 struct Air_Conditioning: Resource, Has_Criterias {
-    var criterias: EloSet<String> = {
-        var tmp = EloSet<String>()
+    var criterias: [String] = {
+        var tmp = [String]()
         tmp.append("Gentle wind that is not against head")
         return tmp
     }()
