@@ -19,8 +19,6 @@ protocol Require_PublicService: Proper, PSArchitectural {
     }
 }
 
-struct Meetup: PublicService {}
-
 struct CirclePopularWill_Statistics: Reflect_EverlastingValue, Require_PublicService {
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
@@ -72,16 +70,61 @@ struct Hall: Popular_Connectoin {}
 
 struct Dictionary: Popular_Connectoin {}
 
+struct Satirical_Art: Popular_Connectoin {}
+
+struct Rules_Laws: Popular_Connectoin {}
+
 struct Popular_Net: Require_PublicService {
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
         tmp.append(Concept())
         tmp.append(WidelyKnown())
         tmp.append(Rank())
+        tmp.append(Hall())
+        tmp.append(Dictionary())
+        tmp.append(Satirical_Art())
+        tmp.append(Rules_Laws())
         return tmp
     }()
     
     var efficiency: Efficiency = .terrible
     
     // Scientific_Public_World_built_by_Public_Language_built_from_Science
+}
+
+struct Meetup: PublicService {}
+
+let a = "Commonality leads to Situation"
+enum Commonality {
+    case Custom
+    case Taste
+    case Value
+    case Local
+    case Workplace
+}
+
+protocol Community {
+    var memberAmount: MemberAmount
+    var flows: [Flow]
+}
+
+protocol Flow {}
+
+enum MemberAmount {
+    case Household
+}
+
+struct Household: Community {
+    var memberAmount: MemberAmount = .Household
+    var flows: [Flow] = []
+}
+
+struct School: Community {
+    var memberAmount: MemberAmount
+    var flows: [Flow] = []
+}
+
+struct Class: Community {
+    var memberAmount: MemberAmount
+    var flows: [Flow] = []
 }
