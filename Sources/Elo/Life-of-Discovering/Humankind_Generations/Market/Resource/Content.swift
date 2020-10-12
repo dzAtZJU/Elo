@@ -10,8 +10,8 @@ import Elo_Itself
 protocol Content: Resource, Has_Criterias {}
 
 extension Content {
-    var criterias: [String] {
-        var tmp = [String]()
+    var criterias: [Any] {
+        var tmp = [Any]()
         tmp.append("Closeness and Immediacy over attractiveness")
         tmp.append("Sincerity")
         tmp.append("Emotion")

@@ -29,8 +29,8 @@ struct ReedDiffuser: Resource {
 }
 
 struct Pillow: Resource, Has_Criterias, Operable {
-    var criterias:  [String] = {
-        var tmp =  [String]()
+    var criterias:  [Any] = {
+        var tmp =  [Any]()
         tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
@@ -47,8 +47,8 @@ struct Pillow: Resource, Has_Criterias, Operable {
 }
 
 struct Mattress: Resource, Has_Criterias {
-    var criterias: [String] = {
-        var tmp = [String]()
+    var criterias: [Any] = {
+        var tmp = [Any]()
         tmp.append(SoftFit_and_FullTenderSupport().name)
         return tmp
     }()
@@ -58,8 +58,8 @@ struct SoftFit_and_FullTenderSupport {
 }
 
 struct Air_Conditioning: Resource, Has_Criterias {
-    var criterias: [String] = {
-        var tmp = [String]()
+    var criterias: [Any] = {
+        var tmp = [Any]()
         tmp.append("Gentle wind that is not against head")
         return tmp
     }()

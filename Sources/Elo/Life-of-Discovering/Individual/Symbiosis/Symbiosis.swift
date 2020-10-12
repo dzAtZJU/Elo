@@ -14,13 +14,13 @@ protocol In_Symbiosis {
 }
 
 protocol Symbiont: Plant, Require_Detach_and_Witness {
-    var flows: [Indicator] {
+    var flowsBetweenSymbiosis: [Indicator] {
         get
     }
 }
 
 struct Dream: Symbiont {
-    var flows: [Indicator] = []
+    var flowsBetweenSymbiosis: [Indicator] = []
     
     var obstacles: [String] = []
     
@@ -32,7 +32,7 @@ struct Life_of_SideProject: Symbiont {
     
     var semantic_product: String? = "iOS App Development Semantics"
     
-    var flows: [Indicator] = [Anxious()]
+    var flowsBetweenSymbiosis: [Indicator] = [Anxious()]
 }
 
 struct Elo: Symbiont {
@@ -40,7 +40,7 @@ struct Elo: Symbiont {
     
     var semantic_product: String? = "Elo Runtime"
     
-    var flows: [Indicator] = []
+    var flowsBetweenSymbiosis: [Indicator] = []
 }
 
 public struct Intimate_One: Symbiont, Perspective, Task {
@@ -50,7 +50,7 @@ public struct Intimate_One: Symbiont, Perspective, Task {
     
     public var semantic_product: String? = "Social Skill"
     
-    var flows: [Indicator] = [Anxious()]
+    var flowsBetweenSymbiosis: [Indicator] = [Anxious()]
 }
 
 protocol Require_Intimacy: Mockable, Require_PublicService {}

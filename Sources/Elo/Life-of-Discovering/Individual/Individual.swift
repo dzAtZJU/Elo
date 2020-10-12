@@ -21,7 +21,7 @@ struct Life_of_Discovering: IsBattle {
     var interruptions = Interruptions()
 }
 
-protocol Indicator: Proper {
+protocol Indicator: Flow, Proper {
     var indicates: Proper? {
         get
     }
