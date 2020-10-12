@@ -100,7 +100,6 @@ enum Commonality {
     case Taste
     case Value
     case Local
-    case Workplace
 }
 
 protocol Community {
@@ -114,17 +113,41 @@ enum MemberAmount {
     case Household
 }
 
+enum 
+
 struct Household: Community {
     var memberAmount: MemberAmount = .Household
-    var flows: [Flow] = []
+    var flows: [Flow] = [Care()]
+    
+    struct Care: Flow {}
 }
 
 struct School: Community {
     var memberAmount: MemberAmount
-    var flows: [Flow] = []
+    var flows: [Flow] = [Entrusted()]
+    
+    struct Entrusted: Flow {}
 }
 
-struct Class: Community {
+struct Company: Community {
     var memberAmount: MemberAmount
-    var flows: [Flow] = []
+    var flows: [Flow] = [Task()]
+    
+    struct Task: Flow {}
 }
+
+thrown fit
+
+discover cultivate
+
+struct WeWork: Community {
+    var memberAmount: MemberAmount
+    var flows: [Flow] = [Subverter()]
+    
+    struct Subverter: Flow {}
+}
+
+enum Community_Media {
+    case Create_Dialogue
+}
+
