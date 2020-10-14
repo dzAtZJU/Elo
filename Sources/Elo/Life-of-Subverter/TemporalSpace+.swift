@@ -15,8 +15,6 @@ protocol Community {
     }
 }
 
-protocol Flow {}
-
 enum MemberAmount {
     case Household
     case LocalCommunity
@@ -50,4 +48,5 @@ struct Company: Community {
 enum Community_Media {
     case Create_Dialogue
 }
+
 

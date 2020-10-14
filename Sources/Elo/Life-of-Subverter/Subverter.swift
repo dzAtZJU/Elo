@@ -12,10 +12,6 @@ struct Life_of_Subverter: In_Symbiosis {
     var challenge = Unknowable_and_Uncertain_Situations()
 }
 
-struct TemporalSpace_Arrangement: Has_Criterias {
-    var criterias: [Any] = [Temperament()]
-}
-
 struct Situation_Handling: Has_Criterias {
     var criterias: [Any] = [Temperament()]
 }
@@ -26,6 +22,8 @@ enum Commonality {
     case Value_and_Attitude
 }
 
+// Guide
+// LifeStyle
 struct WeWork: Community, Symbiont {
     var flowsBetweenSymbiosis: [Indicator] = [Support(), Encourage()]
     

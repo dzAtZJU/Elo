@@ -8,8 +8,8 @@
 import Elo_Itself
 
 struct Interruptions {
-    var elements: [Text] = {
-        var tmp = [Text]()
+    var elements: [Any] = {
+        var tmp = [Any]()
         tmp.append(Anxious())
         tmp.append(Curious())
         tmp.append(Negate_Self())
@@ -113,19 +113,19 @@ struct Sail_out: SymbiosisAble {
 
 struct Give_Up: IndividualAble {}
 
-struct Curious: Proper, Require_Markets, Operable {
-    var markets: [Market] = {
+extension Curious: Require_Markets, Operable {
+    var markets: [Market] {
         var tmp = [Market]()
         tmp.append(Content_about_City())
         tmp.append(Adventure_in_City())
         return tmp
-    }()
+    }
     
-    var handler: [Task] = {
+    public var handler: [Task] {
         var tmp = [Task]()
         tmp.append(Give_Up())
         return tmp
-    }()
+    }
 }
 
 struct Negate_Self: Proper, Operable {
