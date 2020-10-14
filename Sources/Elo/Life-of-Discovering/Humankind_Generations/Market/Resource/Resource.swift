@@ -32,6 +32,7 @@ struct Pillow: Resource, Has_Criterias, Operable {
     var criterias:  [Any] = {
         var tmp =  [Any]()
         tmp.append(SoftFit_and_FullTenderSupport().name)
+        tmp.append("足夠的高度")
         return tmp
     }()
     
