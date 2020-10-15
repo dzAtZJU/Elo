@@ -7,8 +7,6 @@
 //
 import Elo_Itself
 
-public protocol MarketMember {}
-
 protocol Market {
     var resources: [MarketMember] {
         get

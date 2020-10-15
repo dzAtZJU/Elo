@@ -7,8 +7,6 @@
 //
 import Elo_Itself
 
-public protocol Resource: MarketMember {}
-
 struct Hoodie: Resource {
 }
 
