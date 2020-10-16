@@ -33,6 +33,7 @@ struct On_the_Go: TimePocket {
     var insertingTasks: [Task] = {
         var tmp = [Task]()
         tmp.append(Duolingo())
+        tmp.append(InUsing_App_Discrimination())
         tmp.append(Watch_Politics_at_Youtube())
         return tmp
         
@@ -43,6 +44,6 @@ struct Watch_Politics_at_Youtube: IndividualAble {}
 public struct Duolingo: IndividualAble {
     public init() {}
 }
-public struct InUsing_App_Discrimination {
+public struct InUsing_App_Discrimination: IndividualAble {
     public init() {}
 }
