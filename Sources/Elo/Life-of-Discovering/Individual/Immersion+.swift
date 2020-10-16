@@ -28,6 +28,7 @@ public enum Brain_Body_Condition: Immersion, Operable {
 struct Sense_of_Security: Immersion, Require_Intimacy {
     var mockings: [MarketMember] = {
         var tmp = [MarketMember]()
+        tmp.append(Hheadscarf())
         tmp.append(Hoodie())
         tmp.append(BeachHouse())
         tmp.append(Dark())

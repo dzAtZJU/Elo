@@ -92,8 +92,8 @@ struct Anxious: Indicator, Operable, Architectural {
     let handler: [Task] = {
         var tmp = [Task]()
         tmp.append(DeepBreath())
-        tmp.append(Drown_In_Content())
         tmp.append(Coffee())
+        tmp.append(Drown_In_Content())
         tmp.append(Mindfulness_Deconstruction())
         tmp.append(Sail_out())
         tmp.append(Dormant())

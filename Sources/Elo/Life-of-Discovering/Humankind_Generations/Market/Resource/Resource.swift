@@ -7,8 +7,9 @@
 //
 import Elo_Itself
 
-struct Hoodie: Resource {
-}
+struct Hoodie: Resource {}
+
+struct Hheadscarf: Resource {}
 
 struct ThrowPillow: Resource {
     

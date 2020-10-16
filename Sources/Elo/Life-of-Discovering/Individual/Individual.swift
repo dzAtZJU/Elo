@@ -52,4 +52,10 @@ extension Life_of_Discovering: IndArchitectural {
     }
 }
 
-protocol Immersion: Proper {}
+public protocol Immersion: Proper {}
+
+public protocol Require_Immersions {
+    var immersions: [Immersion] {
+        get
+    }
+}

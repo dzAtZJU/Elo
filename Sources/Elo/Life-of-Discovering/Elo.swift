@@ -8,9 +8,9 @@
 
 import Elo_Itself
 
-protocol Text {}
+public protocol Text {}
 
-protocol Proper: Text {}
+public protocol Proper: Text {}
 
 struct Sentence: Text {
     var text: String {
