@@ -43,3 +43,6 @@ struct Watch_Politics_at_Youtube: IndividualAble {}
 public struct Duolingo: IndividualAble {
     public init() {}
 }
+public struct InUsing_App_Discrimination {
+    public init() {}
+}
