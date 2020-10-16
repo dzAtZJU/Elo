@@ -22,6 +22,7 @@ extension Content {
 }
 
 struct BeachHouse: Content {}
+struct Nujabes: Content {}
 struct Hiperson: Content {}
 struct DoctorX: Content {}
 

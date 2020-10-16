@@ -32,6 +32,7 @@ public struct Sense_of_Security: Immersion, Require_Intimacy {
         var tmp = [MarketMember]()
         tmp.append(Hheadscarf())
         tmp.append(Hoodie())
+        tmp.append(Nujabes())
         tmp.append(BeachHouse())
         tmp.append(Dark())
         tmp.append(Bedroom())
