@@ -21,6 +21,7 @@ extension Content {
     }
 }
 
+struct Khruangbin: Content {}
 struct BeachHouse: Content {}
 struct Nujabes: Content {}
 struct Hiperson: Content {}

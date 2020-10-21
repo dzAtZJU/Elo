@@ -8,3 +8,10 @@
 import Elo_Itself
 
 struct DiversityRequired_Clustering: Infra {}
+
+struct GlobalService: Infra {
+    var resources: [Resource] = [AppleID(), NetFlix()]
+    
+    struct AppleID: Resource {}
+    struct NetFlix: Resource {}
+}

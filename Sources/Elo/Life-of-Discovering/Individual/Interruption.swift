@@ -25,9 +25,11 @@ struct Mindfulness_Deconstruction: IndividualAble {}
 struct Drown_In_Content: IndividualAble, Affect_Throughput {
     var items: [Content] = {
         var tmp = [Content]()
+        tmp.append(Khruangbin())
+        tmp.append(Nujabes())
         tmp.append(BeachHouse())
-        tmp.append(DoctorX())
         tmp.append(Hiperson())
+        tmp.append(DoctorX())
         return tmp
     }()
     
