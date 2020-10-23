@@ -66,7 +66,7 @@ struct Sleep: IndividualAble {
         return tmp
     }()
     
-    var interruptions: [Text] = {
+    var interruptions: [Any] = {
         var tmp = [Text]()
         tmp.append(Mosquito())
         tmp.append(Stomach())
@@ -74,25 +74,25 @@ struct Sleep: IndividualAble {
         return tmp
     }()
     
-    struct Mosquito: Text {}
-    struct Stomach: Text {}
-    struct Urinate_and_Defecate: Text {}
+    struct Mosquito {}
+    struct Stomach {}
+    struct Urinate_and_Defecate {}
 }
 
-struct Anxious: Indicator, Operable, Architectural {
-    var indicates: Proper? = Unknown_by_Thinking()
-    
-    let avoidance: [IndividualAble] = {
+extension Anxious: Operable, Architectural {
+    var avoidance: [IndividualAble] {
         var tmp = [IndividualAble]()
         tmp.append(Control_SocialInvolvement_Rate())
         tmp.append(Bedroom())
         tmp.append(Sleep())
         return tmp
-    }()
+    }
     
-    let throughput = Throughput(max: 1)
+    var throughput: Throughput {
+        Throughput(max: 1)
+    }
     
-    let handler: [Task] = {
+    public var handler: [Task] {
         var tmp = [Task]()
         tmp.append(DeepBreath())
         tmp.append(Coffee())
@@ -102,7 +102,7 @@ struct Anxious: Indicator, Operable, Architectural {
         tmp.append(Dormant())
         tmp.append(Short_Acting_Drug())
         return tmp
-    }()
+    }
     
     struct Control_SocialInvolvement_Rate: IndividualAble {}
 }

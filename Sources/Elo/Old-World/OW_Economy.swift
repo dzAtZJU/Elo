@@ -13,7 +13,7 @@ enum Old_World {
 }
 
 extension Old_World {
-    struct Market: Proper, Economy_Participant {
+    struct Market: Economy_Participant {
         var visualAngles: [VisualAngle] = {
             var tmp = [VisualAngle]()
             tmp.append(MassMedia())

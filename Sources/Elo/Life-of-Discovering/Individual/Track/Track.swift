@@ -39,14 +39,14 @@ protocol Craftsman {
     }
 }
 
-struct Track: Proper, Craftsman, Force {
-    var elements: [Text] = {
-        var tmp = [Text]()
+struct Track: Craftsman, Force {
+    var elements = {
+        var tmp = [Any]()
         tmp.append(Follow_Current_Minor_Feeling())
         return tmp
     }()
 
-    var destination = "Build new knowledge of life discovering"
+    var destination = "Pave all the way of life discovering"
 
     var repair: [Tool] = {
         var tmp = [Tool]()
@@ -59,21 +59,7 @@ struct Track: Proper, Craftsman, Force {
     }
 }
 
-struct Follow_Current_Minor_Feeling: Proper {
-    var elements: [Indicator] = {
-        var tmp = [Indicator]()
-        tmp.append(Creative_Desire())
-        tmp.append(Repulsion())
-        tmp.append(DeadLocking())
-        return tmp
-    }()
-    struct Creative_Desire: Indicator {}
-    struct Repulsion: Indicator {}
-    struct Concerned: Indicator {}
-}
-struct DeadLocking: Indicator, Operable, Require_PublicService {
-    var indicates: Proper? = nil
-    
+extension DeadLocking: Operable, Require_PublicService {
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
         tmp.append(Meetup())
@@ -91,7 +77,7 @@ struct DeadLocking: Indicator, Operable, Require_PublicService {
     var turnToSymbiont = Dream()
 }
 
-struct Line_of_Thought: Proper, Tool {
+struct Line_of_Thought: Tool {
     var elements: [Text] = {
         var tmp = [Text]()
         tmp.append(Mission())

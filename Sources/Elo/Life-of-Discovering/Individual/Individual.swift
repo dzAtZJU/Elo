@@ -1,11 +1,3 @@
-//
-//  TheIndividual.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/7.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
-
 import Elo_Itself
 
 struct Life_of_Discovering: IsBattle {
@@ -19,17 +11,6 @@ struct Life_of_Discovering: IsBattle {
     }()
     
     var interruptions = Interruptions()
-}
-
-protocol Indicator: Flow, Proper {
-    var indicates: Proper? {
-        get
-    }
-}
-extension Indicator {
-    var indicates: Proper? {
-        nil
-    }
 }
 
 protocol IndArchitectural {
@@ -52,7 +33,7 @@ extension Life_of_Discovering: IndArchitectural {
     }
 }
 
-public protocol Immersion: Proper {}
+public protocol Immersion {}
 
 public protocol Require_Immersions {
     var immersions: [Immersion] {

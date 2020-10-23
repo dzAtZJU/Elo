@@ -6,24 +6,12 @@ protocol PSArchitectural: Architectural {
         get
     }
 }
-protocol Require_PublicService: Proper, PSArchitectural {
+protocol Require_PublicService: PSArchitectural {
     var publicServices: [PublicService] {
         get
     }
 }
 
-struct CirclePopularWill_Statistics: Reflect_EverlastingValue, Require_PublicService {
-    var publicServices: [PublicService] = {
-        var tmp = [PublicService]()
-        tmp.append(Appannie())
-        return tmp
-    }()
-    
-    var efficiency: Efficiency = .terrible
-    
-    struct Appannie: PublicService {}
-    struct Sumally: PublicService {}
-}
 
 protocol Popular_Connectoin: PublicService, Has_Drawbacks {}
 extension Popular_Connectoin {

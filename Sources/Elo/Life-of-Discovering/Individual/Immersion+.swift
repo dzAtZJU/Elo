@@ -1,17 +1,21 @@
-//
-//  Immersion.swift
-//  Semantics
-//
-//  Created by Zhou Wei Ran on 2020/9/6.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
-public enum Soul_Brain_Body_Condition: Immersion, Operable {
+public enum Soul_Brain_Body_Condition: Feeling, Immersion, Operable {
     public var handler: [Task] {
         var tmp = [Task]()
+        // Brain, Body
+        tmp.append(Chat())
+        tmp.append(Walk_with_Friend())
+        tmp.append(Walk_Dog())
         tmp.append(Sleep())
+        tmp.append(王者榮耀())
+        //Soul
+        tmp.append(Sail_out())
         return tmp
+    }
+    
+    var consequence_of_failing: Any? {
+        DeadLocking()
     }
     
     public var saving: [String] {
@@ -23,6 +27,11 @@ public enum Soul_Brain_Body_Condition: Immersion, Operable {
     
     case Full
     case Poor
+    
+    struct Chat: Task {}
+    struct Walk_with_Friend: Task {}
+    struct Walk_Dog: Task {}
+    struct 王者榮耀: Task {}
 }
 
 public struct Sense_of_Security: Immersion, Require_Intimacy {
