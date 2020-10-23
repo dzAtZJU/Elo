@@ -7,7 +7,7 @@
 //
 import Elo_Itself
 
-public enum Brain_Body_Condition: Immersion, Operable {
+public enum Soul_Brain_Body_Condition: Immersion, Operable {
     public var handler: [Task] {
         var tmp = [Task]()
         tmp.append(Sleep())
