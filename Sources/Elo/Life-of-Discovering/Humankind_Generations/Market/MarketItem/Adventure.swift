@@ -7,7 +7,7 @@
 //
 import Elo_Itself
 
-protocol Adventure: MarketMember {}
+protocol Adventure: MarketItem {}
 
 struct Cat_Cafe: Adventure, IndividualAble {}
 
@@ -24,19 +24,4 @@ struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
     struct GlobalRentComparison: PublicService {}
 }
 
-struct Adventure_in_City: Market {
-    var criterias: [String] = {
-        var tmp = [String]()
-        return tmp
-    }()
-    
-    var resources: [MarketMember] = {
-        var tmp = [MarketMember]()
-        tmp.append(EF_日语游学())
-        return tmp
-    }()
-    
-    var efficiency = Efficiency.ok
-    
-    struct EF_日语游学: Adventure {}
-}
+struct EF_日语游学: Adventure {}

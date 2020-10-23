@@ -1,6 +1,6 @@
 import Elo_Itself
 
-protocol Service: MarketMember {}
+protocol Service: MarketItem {}
 
 struct Servant: Service, Has_Criterias {
   var criterias: [Any] {

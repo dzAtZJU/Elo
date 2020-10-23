@@ -84,6 +84,7 @@ struct Anxious: Indicator, Operable, Architectural {
     
     let avoidance: [IndividualAble] = {
         var tmp = [IndividualAble]()
+        tmp.append(Control_SocialInvolvement_Rate())
         tmp.append(Bedroom())
         tmp.append(Sleep())
         return tmp
@@ -102,6 +103,8 @@ struct Anxious: Indicator, Operable, Architectural {
         tmp.append(Short_Acting_Drug())
         return tmp
     }()
+    
+    struct Control_SocialInvolvement_Rate: IndividualAble {}
 }
 
 struct Sail_out: SymbiosisAble {
@@ -115,14 +118,7 @@ struct Sail_out: SymbiosisAble {
 
 struct Give_Up: IndividualAble {}
 
-extension Curious: Require_Markets, Operable {
-    var markets: [Market] {
-        var tmp = [Market]()
-        tmp.append(Content_about_City())
-        tmp.append(Adventure_in_City())
-        return tmp
-    }
-    
+extension Curious: Operable {
     public var handler: [Task] {
         var tmp = [Task]()
         tmp.append(Give_Up())

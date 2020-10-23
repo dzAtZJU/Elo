@@ -21,15 +21,15 @@ extension Content {
     }
 }
 
-struct Khruangbin: Content {}
-struct BeachHouse: Content {}
-struct Nujabes: Content {}
-struct Hiperson: Content {}
-struct DoctorX: Content {}
+protocol Music: Content {}
+struct BeachHouse: Music {}
+struct Hiperson: Music {}
+struct Khruangbin: Music {}
+struct Nujabes: Music {}
 
-struct knowledge_dot_ca: Content {
-    
-}
+protocol Television_and_Movie: Content, Infra {}
+struct DoctorX: Television_and_Movie {}
+struct knowledge_dot_ca: Television_and_Movie {}
 
 struct Content_from_Finland: Content {
     var elements: [String] = {
@@ -39,17 +39,6 @@ struct Content_from_Finland: Content {
         tmp.append("a man without past")
         return tmp
     }()
-}
-
-struct Content_about_City: Market {
-    var resources: [MarketMember] = {
-        var tmp = [Resource]()
-        tmp.append(knowledge_dot_ca())
-        tmp.append(Content_from_Finland())
-        return tmp
-    }()
-    
-    var efficiency = Efficiency.ok
 }
 
 // https://edu.gcfglobal.org/en/

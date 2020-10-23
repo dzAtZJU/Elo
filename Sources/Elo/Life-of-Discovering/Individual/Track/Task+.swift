@@ -8,7 +8,7 @@
 import Elo_Itself
 
 protocol Mockable: Text {
-    var mockings: [MarketMember] {
+    var mockings: [MarketItem] {
         get
     }
 }

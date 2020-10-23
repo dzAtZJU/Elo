@@ -28,8 +28,8 @@ public enum Brain_Body_Condition: Immersion, Operable {
 public struct Sense_of_Security: Immersion, Require_Intimacy {
     public init() {}
     
-    var mockings: [MarketMember] = {
-        var tmp = [MarketMember]()
+    var mockings: [MarketItem] = {
+        var tmp = [MarketItem]()
         tmp.append(Hheadscarf())
         tmp.append(Hoodie())
         tmp.append(Nujabes())
@@ -54,8 +54,8 @@ public struct Sense_of_Security: Immersion, Require_Intimacy {
 public struct Sense_of_Intimacy: Immersion, Require_Intimacy {
     public init() {}
     
-    var mockings: [MarketMember] = {
-        var tmp = [MarketMember]()
+    var mockings: [MarketItem] = {
+        var tmp = [MarketItem]()
         tmp.append(ThrowPillow())
         tmp.append(Cat_Cafe())
         return tmp
