@@ -11,10 +11,13 @@ protocol Symbiont: Plant, Require_Detach_and_Witness {
         get
     }
 }
+extension Symbiont {
+    var flowsBetweenSymbiosis: [Indicator] {
+        []
+    }
+}
 
 struct Dream: Symbiont {
-    var flowsBetweenSymbiosis: [Indicator] = []
-    
     var obstacles: [String] = []
     
     var semantic_product: String? = nil
@@ -24,26 +27,20 @@ struct Life_of_SideProject: Symbiont {
     var obstacles: [String] = ["the world of computing is full of noise and complications"]
     
     var semantic_product: String? = "iOS App Development Semantics"
-    
-    var flowsBetweenSymbiosis: [Indicator] = [Anxious()]
 }
 
 struct Elo: Symbiont {
     var obstacles: [String] = []
     
     var semantic_product: String? = "Elo Runtime"
-    
-    var flowsBetweenSymbiosis: [Indicator] = []
 }
 
 public struct Intimate_One: Symbiont, Perspective, Task {
     public init() {}
     
-    public var obstacles: [String] = ["The possibility of partner leaving drive us to please"]
+    public var obstacles: [String] = []
     
-    public var semantic_product: String? = "Social Skill"
-    
-    var flowsBetweenSymbiosis: [Indicator] = [Anxious()]
+    public var semantic_product: String? = "Social Semantics"
 }
 
 protocol Require_Intimacy: Mockable, Require_PublicService {}

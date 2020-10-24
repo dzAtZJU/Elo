@@ -13,8 +13,6 @@ struct Cat_Cafe: Adventure, IndividualAble {}
 
 struct Bedroom: Adventure, MicroEnvironment, IndividualAble {}
 
-extension WeWork: Adventure, MicroEnvironment {}
-
 struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
     var publicServices: [PublicService] = [Walkscore(), GlobalRentComparison()]
     

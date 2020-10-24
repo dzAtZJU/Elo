@@ -1,16 +1,11 @@
-//
-//  Interruption.swift
-//  Semantics
-//
-//  Created by Zhou Wei Ran on 2020/9/6.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
 struct Interruptions {
     var elements: [Any] = {
         var tmp = [Any]()
         tmp.append(Anxious())
+        tmp.append(Repulsion())
+        tmp.append(Agitated())
         tmp.append(Curious())
         tmp.append(Negate_Self())
         tmp.append(DeadLocking())
@@ -36,9 +31,7 @@ struct Drown_In_Content: IndividualAble, Affect_Throughput {
     var effect = Effect.Decrease
 }
 
-struct Pacify_BrainWave: IndividualAble {
-    
-}
+struct Pacify_BrainWave: IndividualAble {}
 
 struct Dormant: IndividualAble {
         var elements: [IndividualAble] = {
@@ -49,9 +42,7 @@ struct Dormant: IndividualAble {
     }()
 }
 
-struct Short_Acting_Drug: Resource, IndividualAble {
-    
-}
+struct Short_Acting_Drug: Resource, IndividualAble {}
 
 struct Sleep: IndividualAble {
     var resources: [Resource] = {
@@ -107,6 +98,14 @@ extension Anxious: Operable, Architectural {
     struct Control_SocialInvolvement_Rate: IndividualAble {}
 }
 
+extension Agitated: Operable {
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(Shower())
+        return tmp
+    }
+}
+
 struct Sail_out: SymbiosisAble {
     var item: [String] = {
         var tmp = [String]()
@@ -135,3 +134,5 @@ struct Negate_Self: Proper, Operable {
         return tmp
     }()
 }
+
+struct Shower: IndividualAble {}

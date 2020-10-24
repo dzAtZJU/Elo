@@ -1,9 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Zhou Wei Ran on 2020/10/12.
-//
 import Elo_Itself
 
 struct Life_of_Subverter: In_Symbiosis {
@@ -12,28 +6,21 @@ struct Life_of_Subverter: In_Symbiosis {
     var challenge = Unknowable_and_Uncertain_Situations()
 }
 
-struct Situation_Handling: Has_Criterias {
-    var criterias: [Any] = [Temperament()]
-}
-
 enum Commonality {
     case Temperament
     case Taste
     case Value_and_Attitude
 }
 
-// Guide
-// LifeStyle
-struct WeWork: Community, Symbiont {
-    var flowsBetweenSymbiosis: [Indicator] = [Support(), Encourage()]
-    
-    var memberAmount: MemberAmount = .LocalCommunity
-    var flowsInCommunity: [Flow] = [Support(), Encourage(), Retain()]
-    
-    struct Support: Indicator {}
-    struct Encourage: Indicator {}
-    struct Retain: Indicator {}
-    
-    var semantic_product: String? = nil
-    var obstacles: [String] = []
-}
+struct Get_to_Know: Flow {}
+
+struct Create_Dialogue: Flow {}
+
+struct Encourage_and_Support: Flow {}
+
+struct Entrusted: Flow {}
+
+struct Care: Flow {}
+
+struct WorkTask: Flow {}
+

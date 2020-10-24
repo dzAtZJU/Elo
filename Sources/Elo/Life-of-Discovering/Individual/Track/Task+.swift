@@ -7,7 +7,7 @@
 
 import Elo_Itself
 
-protocol Mockable: Text {
+protocol Mockable {
     var mockings: [MarketItem] {
         get
     }
@@ -22,7 +22,6 @@ public protocol TimePocket {
 struct LongHoursWorking: Task {
     var closetoAdventures: [Adventure] = {
         var tmp = [Adventure]()
-        tmp.append(WeWork())
         tmp.append(WalkableCommunity())
         tmp.append(Bedroom())
         return tmp

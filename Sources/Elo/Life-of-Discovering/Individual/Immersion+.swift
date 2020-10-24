@@ -78,3 +78,5 @@ public struct Sense_of_Intimacy: Immersion, Require_Intimacy {
     
     var efficiency = Efficiency.terrible
 }
+
+public protocol MicroEnvironment {}

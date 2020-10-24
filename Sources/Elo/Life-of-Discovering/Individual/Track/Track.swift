@@ -20,7 +20,7 @@ protocol IsBattle {
 }
 
 protocol Has_Weapon {
-    var weapons: [Text] {
+    var weapons: [Any] {
         get
     }
 }
