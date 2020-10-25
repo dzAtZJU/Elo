@@ -14,7 +14,7 @@ public enum Soul_Brain_Body_Condition: Feeling, Immersion, Operable {
         return tmp
     }
     
-    var consequence_of_failing: Any? {
+    public var consequence_of_failing: Any? {
         DeadLocking()
     }
     

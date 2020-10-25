@@ -1,10 +1,3 @@
-//
-//  Motivation.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/7.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
 protocol Force {}
@@ -40,7 +33,7 @@ protocol Craftsman {
 }
 
 struct Track: Craftsman, Force {
-    var elements = {
+    var elements: [Any] = {
         var tmp = [Any]()
         tmp.append(Follow_Current_Minor_Feeling())
         return tmp
@@ -57,24 +50,6 @@ struct Track: Craftsman, Force {
     var constrained_by: [Tool] {
         repair
     }
-}
-
-extension DeadLocking: Operable, Require_PublicService {
-    var publicServices: [PublicService] = {
-        var tmp = [PublicService]()
-        tmp.append(Meetup())
-        return tmp
-    }()
-    
-    var efficiency = Efficiency.terrible
-    
-    var handler: [Task] = {
-        var tmp = [Task]()
-        tmp.append(Dormant())
-        return tmp
-    }()
-    
-    var turnToSymbiont = Dream()
 }
 
 struct Line_of_Thought: Tool {

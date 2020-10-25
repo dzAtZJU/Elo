@@ -58,7 +58,7 @@ struct Sleep: IndividualAble {
     }()
     
     var interruptions: [Any] = {
-        var tmp = [Text]()
+        var tmp = [Any]()
         tmp.append(Mosquito())
         tmp.append(Stomach())
         tmp.append(Urinate_and_Defecate())
@@ -125,14 +125,46 @@ extension Curious: Operable {
     }
 }
 
-struct Negate_Self: Proper, Operable {
-    var handler: [Task] = {
-        var tmp = [Task]()
-        tmp.append(Watch_Politics_at_Youtube())
-        tmp.append(Dormant())
-        tmp.append(Cat_Cafe())
+extension DeadLocking: Operable, Require_PublicService {
+    var publicServices: [PublicService] = {
+        var tmp = [PublicService]()
+        tmp.append(Meetup())
         return tmp
     }()
+    
+    var efficiency = Efficiency.terrible
+    
+    var handler: [Task] = {
+        var tmp = [Task]()
+        tmp.append(Turn_to_Elo())
+        tmp.append(Dormant())
+        return tmp
+    }()
+    
+    var turnToSymbiont = Dream()
+}
+
+extension Negate_Self: Operable {
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(Cat_Cafe())
+        tmp.append(Turn_to_Elo())
+        tmp.append(Dormant())
+        tmp.append(Watch_Politics_at_Youtube())
+        return tmp
+    }
 }
 
 struct Shower: IndividualAble {}
+
+struct Turn_to_Elo: Task, Has_Tasks {
+    var tasks: [Task] = {
+        var tmp = [Task]()
+        tmp.append(初心拾回())
+        tmp.append(Incorporate_NewConcept())
+        return tmp
+    }()
+    
+    struct 初心拾回: Task {}
+    struct Incorporate_NewConcept: Task {}
+}
