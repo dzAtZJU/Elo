@@ -1,7 +1,7 @@
 import Elo_Itself
 
 struct Life_of_Subverter: In_Symbiosis {
-    var symbionts: [Symbiont] = [WeWork()]
+    var symbionts: [Symbiont] = []
     
     var challenge = Unknowable_and_Uncertain_Situations()
 }
