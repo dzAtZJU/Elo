@@ -74,3 +74,4 @@ struct Popular_Net: Require_PublicService {
 }
 
 struct Meetup: PublicService {}
+struct 平行世界: PublicService, Task {}

@@ -1,21 +1,55 @@
 import Elo_Itself
 
-public enum Soul_Brain_Body_Condition: Feeling, Immersion, Operable {
-    public var handler: [Task] {
+protocol IndividualCondition: Feeling, Immersion, Require_Cultivating_and_Nurturing {
+    var recovering: [Task] {
+        get
+    }
+    
+    var saving: [String] {
+        get
+    }
+}
+
+public enum Soul_Condition: IndividualCondition {
+    case Full
+    case Poor
+    
+    public var cultivating_and_nurturing: [Task] {
         var tmp = [Task]()
-        // Brain, Body
-        tmp.append(Chat())
-        tmp.append(Walk_with_Friend())
-        tmp.append(Walk_Dog())
-        tmp.append(Sleep())
-        tmp.append(王者榮耀())
-        //Soul
+        tmp.append(平行世界())
+        tmp.append(Synchronize_Body_and_Brain())
+        return tmp
+    }
+    
+    public var recovering: [Task] {
+        var tmp = [Task]()
         tmp.append(Sail_out())
         return tmp
     }
     
+    var saving: [String] {
+        []
+    }
+    
     public var consequence_of_failing: Any? {
         DeadLocking()
+    }
+}
+
+public enum Brain_Body_Condition: IndividualCondition {
+    public var cultivating_and_nurturing: [Task] {
+        var tmp = [Task]()
+        tmp.append(Synchronize_Body_and_Brain())
+        return tmp
+    }
+    
+    public var recovering: [Task] {
+        var tmp = [Task]()
+        tmp.append(Spa())
+        tmp.append(Chat())
+        tmp.append(Walk_with_Friend())
+        tmp.append(Walk_Dog())
+        return tmp
     }
     
     public var saving: [String] {
@@ -25,13 +59,12 @@ public enum Soul_Brain_Body_Condition: Feeling, Immersion, Operable {
         return tmp
     }
     
+    public var consequence_of_failing: Any? {
+        DeadLocking()
+    }
+    
     case Full
     case Poor
-    
-    struct Chat: Task {}
-    struct Walk_with_Friend: Task {}
-    struct Walk_Dog: Task {}
-    struct 王者榮耀: Task {}
 }
 
 public struct Sense_of_Security: Immersion, Require_Intimacy {
@@ -72,6 +105,7 @@ public struct Sense_of_Intimacy: Immersion, Require_Intimacy {
     
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
+        tmp.append(平行世界())
         tmp.append(Meetup())
         return tmp
     }()

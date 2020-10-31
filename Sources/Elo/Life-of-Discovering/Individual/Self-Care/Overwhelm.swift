@@ -1,18 +1,12 @@
-//
-//  Overwhelm.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/10/3.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
+
+protocol SelfCare: Task {}
 
 protocol Overwhelm: Force {
     var drives: [SelfCare] {
         get
     }
 }
-protocol SelfCare: Task {}
 
 struct Drowsiness: Overwhelm {
     var drives: [SelfCare] = [Sleep()]

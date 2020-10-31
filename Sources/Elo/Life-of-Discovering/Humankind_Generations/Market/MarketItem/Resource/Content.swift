@@ -8,7 +8,6 @@
 import Elo_Itself
 
 protocol Content: Resource, Has_Criterias {}
-
 extension Content {
     var criterias: [Any] {
         var tmp = [Any]()
@@ -20,15 +19,16 @@ extension Content {
         return tmp
     }
 }
-
 protocol Music: Content {}
+protocol Television_and_Movie: Content, Infra {}
+
 struct BeachHouse: Music {}
 struct Hiperson: Music {}
 struct Khruangbin: Music {}
 struct Nujabes: Music {}
 
-protocol Television_and_Movie: Content, Infra {}
 struct DoctorX: Television_and_Movie {}
+struct EmilyInParis: Television_and_Movie {}
 struct knowledge_dot_ca: Television_and_Movie {}
 
 struct Content_from_Finland: Content {

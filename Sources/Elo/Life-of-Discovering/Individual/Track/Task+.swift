@@ -35,7 +35,6 @@ struct On_the_Go: TimePocket {
         tmp.append(InUsing_App_Discrimination())
         tmp.append(Watch_Politics_at_Youtube())
         return tmp
-        
     }()
 }
 
