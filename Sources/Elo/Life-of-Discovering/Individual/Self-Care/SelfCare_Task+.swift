@@ -71,12 +71,19 @@ struct Sail_out: SymbiosisAble, Require_PublicService {
         var tmp = [PublicService]()
         tmp.append(平行世界())
         return tmp
-    }
+    }()
 }
+
+struct Familiar_and_Accessible: Task {}
 
 struct Give_Up: IndividualAble {}
 
 struct Shower: IndividualAble {}
+
+struct SkinCare: SelfCare, TimePocket {
+    var perspective: Perspective? = Intimate_One()
+    var insertingTasks: [Task] = [Watch_Politics_at_Youtube()]
+}
 
 struct Turn_to_Elo: Task, Has_Tasks {
     var tasks: [Task] = {

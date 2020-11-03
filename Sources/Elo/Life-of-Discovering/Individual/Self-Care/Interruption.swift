@@ -13,6 +13,16 @@ struct Interruptions {
     }()
 }
 
+extension Tired: Operable {
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(Shower())
+        tmp.append(SkinCare())
+        tmp.append(Familiar_and_Accessible())
+        return tmp
+    }
+}
+
 extension Anxious: Operable, Architectural {
     var avoidance: [IndividualAble] {
         var tmp = [IndividualAble]()

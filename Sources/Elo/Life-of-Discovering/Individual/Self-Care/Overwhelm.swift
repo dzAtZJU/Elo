@@ -1,6 +1,6 @@
 import Elo_Itself
 
-protocol SelfCare: Task {}
+protocol SelfCare: IndividualAble {}
 
 protocol Overwhelm: Force {
     var drives: [SelfCare] {
@@ -20,11 +20,6 @@ extension Sleep: SelfCare {
 extension Intimate_One: Overwhelm {
     var drives: [SelfCare] {
         [SkinCare()]
-    }
-    
-    struct SkinCare: SelfCare, TimePocket {
-        var perspective: Perspective? = Intimate_One()
-        var insertingTasks: [Task] = [Watch_Politics_at_Youtube()]
     }
 }
 

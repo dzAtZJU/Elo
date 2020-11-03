@@ -1,12 +1,8 @@
 import Elo_Itself
 
 protocol PublicService {}
-protocol PSArchitectural: Architectural {
-    var efficiency: Efficiency {
-        get
-    }
-}
-protocol Require_PublicService: PSArchitectural {
+
+protocol Require_PublicService {
     var publicServices: [PublicService] {
         get
     }
@@ -74,4 +70,3 @@ struct Popular_Net: Require_PublicService {
 }
 
 struct Meetup: PublicService {}
-struct 平行世界: PublicService, Task {}
