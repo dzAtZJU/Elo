@@ -1,10 +1,3 @@
-//
-//  Content.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/18.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
 protocol Content: Resource, Has_Criterias {}

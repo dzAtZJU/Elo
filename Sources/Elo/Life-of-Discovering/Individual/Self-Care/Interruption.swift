@@ -18,7 +18,7 @@ extension Tired: Operable {
         var tmp = [Task]()
         tmp.append(Shower())
         tmp.append(SkinCare())
-        tmp.append(Familiar_and_Accessible())
+        tmp.append(TurnTo_Familiar_and_Accessible())
         return tmp
     }
 }
@@ -40,7 +40,7 @@ extension Anxious: Operable, Architectural {
         var tmp = [Task]()
         tmp.append(DeepBreath())
         tmp.append(Coffee())
-        tmp.append(Drown_In_Content())
+        tmp.append(TurnTo_Familiar_and_Accessible())
         tmp.append(Mindfulness_Deconstruction())
         tmp.append(Sail_out())
         tmp.append(Dormant())
