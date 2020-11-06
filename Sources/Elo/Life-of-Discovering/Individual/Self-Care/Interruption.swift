@@ -4,6 +4,7 @@ struct Interruptions {
     var elements: [Any] = {
         var tmp = [Any]()
         tmp.append(Anxious())
+        tmp.append(Waiting())
         tmp.append(Repulsion())
         tmp.append(Agitated())
         tmp.append(Curious())
