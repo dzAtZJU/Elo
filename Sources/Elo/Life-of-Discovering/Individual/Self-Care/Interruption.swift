@@ -111,3 +111,9 @@ extension 感情冷淡期: Operable {
         return tmp
     }
 }
+
+extension Creative_Desire: Require_Immersion {
+    var immersions: [Immersion] = [
+        Sense_of_Security()
+    ]
+}
