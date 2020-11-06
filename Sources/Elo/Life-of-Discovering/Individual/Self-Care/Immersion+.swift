@@ -67,6 +67,12 @@ public enum Brain_Body_Condition: IndividualCondition {
     case Poor
 }
 
+protocol Require_Immersion {
+    var immersions: [Immersion] {
+        get
+    }
+}
+
 public struct Sense_of_Security: Immersion, Require_Intimacy {
     public init() {}
     
