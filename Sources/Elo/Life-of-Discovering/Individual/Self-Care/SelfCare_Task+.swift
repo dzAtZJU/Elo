@@ -74,11 +74,13 @@ struct Sail_out: SymbiosisAble, Require_PublicService {
     }()
 }
 
-struct TurnTo_Familiar_and_Accessible: Task, Has_Tasks {
+struct TurnTo_Familiar_and_Accessible: Task, Has_Tasks, Has_Criterias {
     var tasks: [Task] = [
         AppleMusic最爱精选(),
         Drown_In_Content()
     ]
+    
+    var criterias: [Any] = ["Loud", "Dense"]
 }
 
 struct Give_Up: IndividualAble {}

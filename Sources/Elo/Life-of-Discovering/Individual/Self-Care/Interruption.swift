@@ -39,6 +39,7 @@ extension Anxious: Operable, Architectural {
     
     public var handler: [Task] {
         var tmp = [Task]()
+        tmp.append(Shower())
         tmp.append(DeepBreath())
         tmp.append(Coffee())
         tmp.append(TurnTo_Familiar_and_Accessible())
