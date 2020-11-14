@@ -81,7 +81,7 @@ struct Phases: Proper {
             return sentence
             }())
         tmp.append({
-            let sentence = Sentence(sentence: "Check Twitter & Feedly")
+            let sentence = Sentence(sentence: "Check Medium & Feedly & Twitter")
             return sentence
             }())
         tmp.append({
