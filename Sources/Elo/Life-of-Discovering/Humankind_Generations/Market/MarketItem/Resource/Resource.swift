@@ -65,6 +65,8 @@ struct Air_Conditioning: Resource, Has_Criterias {
     }()
 }
 
+struct Air_Purifying: Resource {}
+
 struct Waist_Cushion: Resource {}
 
 struct Coffee: Resource, IndividualAble {}
