@@ -1,19 +1,5 @@
 import Elo_Itself
 
-struct Interruptions: Under_Expectation {
-    var elements: [Any] = {
-        var tmp = [Any]()
-        tmp.append(Anxious())
-        tmp.append(Waiting())
-        tmp.append(Repulsion())
-        tmp.append(Agitated())
-        tmp.append(Curious())
-        tmp.append(Negate_Self())
-        tmp.append(DeadLocking())
-        return tmp
-    }()
-}
-
 extension DriedUp: Operable {
     public var handler: [Task] {
         var tmp = [Task]()
