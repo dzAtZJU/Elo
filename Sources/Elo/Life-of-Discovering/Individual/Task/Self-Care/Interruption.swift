@@ -59,6 +59,7 @@ extension Anxious: Operable, Architectural {
     
     public var handler: [Task] {
         var tmp = [Task]()
+        tmp.append(Dont_Jump())
         tmp.append(DeepBreath())
         tmp.append(Fragrance())
         tmp.append(Coffee())
@@ -74,6 +75,8 @@ extension Anxious: Operable, Architectural {
     struct Control_SocialInvolvement_Rate: IndividualAble {}
     
     struct Facing_New {}
+    
+    struct Dont_Jump: Task {}
 }
 
 extension Agitated: Operable {
