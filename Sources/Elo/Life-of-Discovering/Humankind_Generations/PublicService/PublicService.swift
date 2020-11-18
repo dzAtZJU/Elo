@@ -65,8 +65,6 @@ struct Popular_Net: Require_PublicService {
     }()
     
     var efficiency: Efficiency = .terrible
-    
-    // Scientific_Public_World_built_by_Public_Language_built_from_Science
 }
 
 struct Meetup: PublicService {}

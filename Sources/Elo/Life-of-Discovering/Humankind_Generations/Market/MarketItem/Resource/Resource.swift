@@ -30,7 +30,7 @@ struct ReedDiffuser: Resource {
 struct Pillow: Resource, Has_Criterias, Operable {
     var criterias:  [Any] = {
         var tmp =  [Any]()
-        tmp.append(SoftFit_and_FullTenderSupport().name)
+        tmp.append(SoftFit_and_FullTenderSupport())
         tmp.append("足夠的高度")
         return tmp
     }()
@@ -49,13 +49,11 @@ struct Pillow: Resource, Has_Criterias, Operable {
 struct Mattress: Resource, Has_Criterias {
     var criterias: [Any] = {
         var tmp = [Any]()
-        tmp.append(SoftFit_and_FullTenderSupport().name)
+        tmp.append(SoftFit_and_FullTenderSupport())
         return tmp
     }()
 }
-struct SoftFit_and_FullTenderSupport {
-    var name = "SoftFit_and_FullTenderSupport"
-}
+struct SoftFit_and_FullTenderSupport {}
 
 struct Air_Conditioning: Resource, Has_Criterias {
     var criterias: [Any] = {
@@ -72,3 +70,11 @@ struct Waist_Cushion: Resource {}
 struct Coffee: Resource, IndividualAble {}
 
 struct Long_Acting_Drug: Resource, MicroEnvironment {}
+
+struct Fragrance: Resource, Task {}
+
+protocol Mockable {
+    var mockings: [MarketItem] {
+        get
+    }
+}

@@ -7,11 +7,11 @@ struct Mindfulness_Deconstruction: IndividualAble {}
 struct Drown_In_Content: IndividualAble, Affect_Throughput {
     var items: [Content] = {
         var tmp = [Content]()
-        tmp.append(EmilyInParis())
         tmp.append(Khruangbin())
         tmp.append(Nujabes())
         tmp.append(BeachHouse())
         tmp.append(Hiperson())
+        tmp.append(EmilyInParis())
         tmp.append(DoctorX())
         return tmp
     }()
@@ -58,7 +58,6 @@ struct Sleep: IndividualAble {
     struct Stomach {}
     struct Urinate_and_Defecate {}
 }
-
 
 struct Sail_out: SymbiosisAble, Require_PublicService {
     var item: [String] = {

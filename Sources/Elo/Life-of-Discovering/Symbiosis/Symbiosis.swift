@@ -29,7 +29,7 @@ struct Life_of_SideProject: Symbiont {
     var semantic_product: String? = "iOS App Development Semantics"
 }
 
-struct Elo: Symbiont {
+struct Elo: Symbiont, Task {
     var obstacles: [String] = []
     
     var semantic_product: String? = "Elo Runtime"

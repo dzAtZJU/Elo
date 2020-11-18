@@ -1,12 +1,5 @@
-//
-//  Metropolis.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/16.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 protocol IsSpectrum {
-    var bands: [Economy_Participant] {
+    var bands: [Any] {
         get
     }
 }
@@ -24,10 +17,6 @@ protocol MarketSegmentation {
 }
 
 struct Peer: Economy_Participant {
-    
-}
-
-struct Predecessor: Economy_Participant {
     
 }
 

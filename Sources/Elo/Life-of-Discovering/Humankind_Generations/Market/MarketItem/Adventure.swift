@@ -1,13 +1,12 @@
-//
-//  Adventure.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/18.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
 protocol Adventure: MarketItem {}
+
+protocol Require_Adventures {
+    var adventures: [Adventure] {
+        get
+    }
+}
 
 struct Cat_Cafe: Adventure, IndividualAble {}
 

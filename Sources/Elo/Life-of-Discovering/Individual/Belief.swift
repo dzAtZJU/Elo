@@ -1,7 +1,5 @@
 import Elo_Itself
 
-protocol Self_Belief {}
-
 struct Sensitive: Self_Belief {}
 
 struct Thorough_Challenge_Everything: Self_Belief, Affect_Throughput {

@@ -1,6 +1,6 @@
 import Elo_Itself
 
-struct Interruptions {
+struct Interruptions: Under_Expectation {
     var elements: [Any] = {
         var tmp = [Any]()
         tmp.append(Anxious())
@@ -12,6 +12,20 @@ struct Interruptions {
         tmp.append(DeadLocking())
         return tmp
     }()
+}
+
+extension DriedUp: Operable {
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(Elo())
+        tmp.append(Review_Bear())
+        tmp.append(TED())
+        return tmp
+    }
+    
+    struct TED: Task {}
+    struct Review_Bear: Task {}
+    struct 正邪: Task {}
 }
 
 extension Tired: Operable {
@@ -37,20 +51,29 @@ extension Anxious: Operable, Architectural {
         Throughput(max: 1)
     }
     
+    public var cause: [Any] {
+        var tmp = [Any]()
+        tmp.append(Facing_New())
+        return tmp
+    }
+    
     public var handler: [Task] {
         var tmp = [Task]()
-        tmp.append(Shower())
         tmp.append(DeepBreath())
+        tmp.append(Fragrance())
         tmp.append(Coffee())
+        tmp.append(Shower())
         tmp.append(TurnTo_Familiar_and_Accessible())
         tmp.append(Mindfulness_Deconstruction())
-        tmp.append(Sail_out())
         tmp.append(Dormant())
+        tmp.append(Sail_out())
         tmp.append(Short_Acting_Drug())
         return tmp
     }
     
     struct Control_SocialInvolvement_Rate: IndividualAble {}
+    
+    struct Facing_New {}
 }
 
 extension Agitated: Operable {
@@ -115,7 +138,7 @@ extension 感情冷淡期: Operable {
 }
 
 extension Creative_Desire: Require_Immersion {
-    var immersions: [Immersion] = [
-        Sense_of_Security()
-    ]
+    var immersions: [Immersion] {
+        [Soul_Condition.Full]
+    }
 }

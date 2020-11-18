@@ -1,6 +1,6 @@
 import Elo_Itself
 
-protocol IndividualCondition: Feeling, Immersion, Require_Cultivating_and_Nurturing {
+protocol IndividualCondition: Feeling, Immersion, Task, Has_Tasks {
     var recovering: [Task] {
         get
     }
@@ -10,18 +10,24 @@ protocol IndividualCondition: Feeling, Immersion, Require_Cultivating_and_Nurtur
     }
 }
 
-public enum Soul_Condition: IndividualCondition {
+public enum Career_Condition: IndividualCondition {
+    case Completed
+    case Holding
+}
+
+public enum Soul_Condition: IndividualCondition, Require_Immersions {
     case Full
     case Poor
     
-    public var cultivating_and_nurturing: [Task] {
-        var tmp = [Task]()
-        tmp.append(平行世界())
-        tmp.append(Synchronize_Body_and_Brain())
-        return tmp
+    public var approaches: [Approach] {
+        return [Cultivating_and_Nurturing(tools: [平行世界()])]
     }
     
-    public var recovering: [Task] {
+    public var tasks: [Task] {
+        [Synchronize_Body_and_Brain()]
+    }
+    
+    var recovering: [Task] {
         var tmp = [Task]()
         tmp.append(Sail_out())
         return tmp
@@ -34,13 +40,15 @@ public enum Soul_Condition: IndividualCondition {
     public var consequence_of_failing: Any? {
         DeadLocking()
     }
+    
+    public var immersions: [Immersion] {
+        [Sense_of_Intimacy(), Sense_of_Security()]
+    }
 }
 
 public enum Brain_Body_Condition: IndividualCondition {
-    public var cultivating_and_nurturing: [Task] {
-        var tmp = [Task]()
-        tmp.append(Synchronize_Body_and_Brain())
-        return tmp
+    public var tasks: [Task] {
+        [Synchronize_Body_and_Brain()]
     }
     
     public var recovering: [Task] {
@@ -111,7 +119,6 @@ public struct Sense_of_Intimacy: Immersion, Require_Intimacy {
     
     var publicServices: [PublicService] = {
         var tmp = [PublicService]()
-        tmp.append(平行世界())
         tmp.append(Meetup())
         return tmp
     }()

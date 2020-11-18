@@ -16,11 +16,16 @@ struct Get_to_Know: Flow {}
 
 struct Create_Dialogue: Flow {}
 
-struct Encourage_and_Support: Flow {}
-
-struct Entrusted: Flow {}
+struct Encourage: Flow {}
 
 struct Care: Flow {}
 
 struct WorkTask: Flow {}
 
+
+enum Education: Int {
+    case Guide = 1
+    case Resource = 2
+    case Spiritually_Nearest_First_Approach = 4
+    case Exposure_Control = 5
+}
