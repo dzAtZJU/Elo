@@ -40,5 +40,3 @@ public protocol Require_Immersions {
         get
     }
 }
-
-protocol Magician {}

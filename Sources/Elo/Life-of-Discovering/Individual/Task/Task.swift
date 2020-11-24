@@ -1,17 +1,38 @@
 import Elo_Itself
 
-let tasks: [Dimension: [Task]] = {
-    var tmp = [Dimension: [Task]]()
-    tmp[Dimension(time: On_the_Go() , condition: Career_Condition.Completed)] = [
+let tasks: [TaskCoordinate: [Task]] = {
+    var tmp = [TaskCoordinate: [Task]]()
+    tmp[TaskCoordinate(time: On_the_Go() , condition: Career_Condition.Completed)] = [
         Duolingo(),
         InUsing_App_Discrimination()
     ]
     
-    tmp[Dimension(time: On_the_Go() , condition: Career_Condition.Holding)] = [
+    tmp[TaskCoordinate(time: On_the_Go() , condition: Career_Condition.Holding)] = [
         Youtube()
     ]
     return tmp
 }()
+
+//TODO
+// 自媒体 -> 自然语言与Leisure: 不知晓/复杂的东西 -> 息息相关
+// 确定息息相关的关键词语，作为靠近个体的API
+                    //  政权
+                    //  现实
+                    //  历史
+// 邪恶势力：失职，撒谎，黑箱，造假，违法，恐吓，有组织，受贿，隐藏，独裁；经费支出
+// 关系链
+
+// 对比
+
+// 情感，斥责，骄傲，保卫
+// 宪法，规则
+// 公正
+// 真相，阳光
+// 直觉：荒唐，离谱
+// 年轻人
+protocol Leisure {}
+struct 文睿: Leisure {}
+struct 江峰: Leisure {}
 
 struct On_the_Go: TimePocket {}
 
@@ -66,8 +87,6 @@ struct Track: Task, Force {
 }
 
 protocol Predecessor: Steady_Source {}
-struct 文睿: Predecessor {}
-struct 江峰: Predecessor {}
 extension Medium: Predecessor {}
 extension Feedly: Predecessor {}
 
@@ -88,7 +107,6 @@ struct Materials: IsSpectrum {
         }
     }
     
-
     struct Friends: Steady_Source, Has_Materials {
         var materials: [Material] {
             var tmp = [Material]()

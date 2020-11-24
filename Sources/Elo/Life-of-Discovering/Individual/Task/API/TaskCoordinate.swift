@@ -1,6 +1,6 @@
 import Foundation
 
-struct Dimension: Hashable, Equatable {
+struct TaskCoordinate: Hashable, Equatable {
     let time: Time
     let condition: IndividualCondition
     

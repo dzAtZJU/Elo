@@ -24,6 +24,22 @@ extension Tired: Operable {
     }
 }
 
+extension Depression: Operable {
+    var avoidance: [IndividualAble] {
+        var tmp = [IndividualAble]()
+        tmp.append(Sleep())
+        tmp.append(Diet())
+        return tmp
+    }
+    
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(TurnTo_Familiar_and_Accessible())
+        tmp.append(Elo())
+        return tmp
+    }
+}
+
 extension Anxious: Operable, Architectural {
     var avoidance: [IndividualAble] {
         var tmp = [IndividualAble]()
@@ -40,6 +56,7 @@ extension Anxious: Operable, Architectural {
     public var cause: [Any] {
         var tmp = [Any]()
         tmp.append(Facing_New())
+        tmp.append(Illusion())
         return tmp
     }
     
@@ -62,8 +79,17 @@ extension Anxious: Operable, Architectural {
     
     struct Facing_New {}
     
-    struct Dont_Jump: Task {}
+    struct Illusion {}
+    
+    struct Dont_Jump: Task, Has_Tasks {
+        var tasks: [Task] = [
+            Aesthetic(),
+            Savour_and_Reliving_and_Lingering_and_Afterglow(),
+        ]
+    }
 }
+
+extension Aesthetic: Task {}
 
 extension Agitated: Operable {
     public var handler: [Task] {
@@ -131,3 +157,5 @@ extension Creative_Desire: Require_Immersion {
         [Soul_Condition.Full]
     }
 }
+
+struct Savour_and_Reliving_and_Lingering_and_Afterglow: Emotion {}
