@@ -89,6 +89,8 @@ extension Anxious: Operable, Architectural {
     }
 }
 
+extension Savour_and_Reliving_and_Lingering_and_Afterglow: Task {}
+
 extension Aesthetic: Task {}
 
 extension Agitated: Operable {
@@ -133,7 +135,7 @@ extension DeadLocking: Operable, Require_PublicService {
 extension Negate_Self: Operable {
     public var handler: [Task] {
         var tmp = [Task]()
-        tmp.append(Watch_Politics_at_Youtube())
+        tmp.append(Youtube())
         tmp.append(Drown_In_Content())
         tmp.append(Cat_Cafe())
         tmp.append(Intimate_One())

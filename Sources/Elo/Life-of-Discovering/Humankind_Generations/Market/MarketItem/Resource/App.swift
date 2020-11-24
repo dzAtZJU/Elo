@@ -10,7 +10,7 @@ struct Feedly: App {}
 struct 平行世界: App, PublicService, Task, Tool {}
 
 struct Twitter: App {}
-struct Youtube: Infra, App, IndividualAble {}
+struct Youtube: App, IndividualAble {}
 
 struct Photos: App {}
 struct Health: App {}

@@ -91,11 +91,12 @@ extension Medium: Predecessor {}
 extension Feedly: Predecessor {}
 
 struct Materials: IsSpectrum {
-    var bands: [[Steady_Source]] = [
+    var bands: [Any] = [
         Personal(),
-        [文睿(), 江峰(), Medium(), Feedly()]
+        [文睿(), 江峰(), Medium(), Feedly()],
         Friends(),
-        Culture()]
+        Culture()
+    ]
     
     struct Personal: Steady_Source, Has_Materials {
         var materials: [Material] {

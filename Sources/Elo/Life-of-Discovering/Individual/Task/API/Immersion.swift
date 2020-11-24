@@ -11,6 +11,18 @@ protocol IndividualCondition: Feeling, Immersion, Task, Has_Tasks {
 }
 
 public enum Career_Condition: IndividualCondition {
+    var recovering: [Task] {
+        []
+    }
+    
+    var saving: [String] {
+        []
+    }
+    
+    public var tasks: [Task] {
+        []
+    }
+    
     case Completed
     case Holding
 }
