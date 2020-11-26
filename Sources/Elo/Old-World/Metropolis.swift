@@ -1,9 +1,3 @@
-protocol IsSpectrum {
-    var bands: [Any] {
-        get
-    }
-}
-
 protocol Economy_Participant {
     
 }
