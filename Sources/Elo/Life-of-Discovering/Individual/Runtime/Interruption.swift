@@ -44,6 +44,7 @@ extension Anxious: Operable, Architectural {
     var avoidance: [IndividualAble] {
         var tmp = [IndividualAble]()
         tmp.append(Control_SocialInvolvement_Rate())
+        tmp.append(Workspace())
         tmp.append(Bedroom())
         tmp.append(Sleep())
         return tmp

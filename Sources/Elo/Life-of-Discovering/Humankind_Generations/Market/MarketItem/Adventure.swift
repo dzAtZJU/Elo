@@ -12,6 +12,8 @@ struct Cat_Cafe: Adventure, IndividualAble {}
 
 struct Bedroom: Adventure, MicroEnvironment, IndividualAble {}
 
+struct Workspace: Adventure, MicroEnvironment, IndividualAble {}
+
 struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
     var publicServices: [PublicService] = [Walkscore(), GlobalRentComparison()]
     
