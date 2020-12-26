@@ -6,7 +6,14 @@ struct Thorough_Challenge_Everything: Self_Belief, Affect_Throughput {
     var effect: Effect = .Decrease
 }
 
-struct Inspirational: Self_Belief {}
+struct Inspirational: Self_Belief {
+    struct Love_Task_SocialNetwork: Self_Belief {
+        let items = [
+            "No love, no move",
+            "I love, I move"
+        ]
+    }
+}
 
 struct Resilience: Self_Belief {}
 
