@@ -24,6 +24,13 @@ extension Popular_Connectoin {
     }
 }
 
+public struct Recommend: Encourage, Popular_Connectoin {}
+public struct SearchEngine: Initiative, Popular_Connectoin, Require_PublicService {
+    var publicServices: [PublicService] {
+        [Recommend()]
+    }
+}
+    
 public struct Concept: Popular_Connectoin, Has_Tasks {
     public init() {}
     public  var tasks: [Task] = {
@@ -68,3 +75,9 @@ struct Popular_Net: Require_PublicService {
 }
 
 struct Meetup: PublicService {}
+
+struct Appannie: PublicService {}
+
+struct Deepaso: PublicService {}
+
+struct Stocks: PublicService {}

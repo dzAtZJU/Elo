@@ -24,3 +24,5 @@ struct WalkableCommunity: Adventure, MicroEnvironment, Require_PublicService {
 }
 
 struct EF_日语游学: Adventure {}
+
+struct Dark: Adventure, MicroEnvironment {}

@@ -1,14 +1,14 @@
 import Elo_Itself
 
-struct Iceberg: Phenomena {
-    var humankindable: Humankindable? = Dig()
-    
-    struct Dig: Humankindable {}
-}
+protocol Iceberg: Phenomena {}
 
-struct Double_Edged_Sword: Phenomena {
-    var humankindable: Humankindable? = Harness()
+protocol Double_Edged_Sword: Phenomena {
+    var item: Any {
+        get
+    }
     
-    struct Harness: Humankindable {}
+    var harness: Any {
+        get
+    }
 }
 

@@ -27,7 +27,7 @@ public enum Career_Condition: IndividualCondition {
     case Holding
 }
 
-public enum Soul_Condition: IndividualCondition, Require_Immersions {
+public enum Soul_Condition: IndividualCondition {
     case Full
     case Poor
     
@@ -51,10 +51,6 @@ public enum Soul_Condition: IndividualCondition, Require_Immersions {
     
     public var consequence_of_failing: Any? {
         DeadLocking()
-    }
-    
-    public var immersions: [Immersion] {
-        [Sense_of_Intimacy(), Sense_of_Security()]
     }
 }
 
@@ -93,49 +89,12 @@ protocol Require_Immersion {
     }
 }
 
-public struct Sense_of_Security: Immersion, Require_Intimacy {
+public struct Sense_of_Security: Immersion {
     public init() {}
-    
-    var mockings: [MarketItem] = {
-        var tmp = [MarketItem]()
-        tmp.append(Hheadscarf())
-        tmp.append(Hoodie())
-        tmp.append(Nujabes())
-        tmp.append(BeachHouse())
-        tmp.append(Dark())
-        tmp.append(Bedroom())
-        tmp.append(Long_Acting_Drug())
-        tmp.append(ReedDiffuser())
-        return tmp
-    }()
-    
-    var publicServices: [PublicService] = {
-        var tmp = [PublicService]()
-        return tmp
-    }()
-    
-    var efficiency = Efficiency.terrible
-    
-    struct Dark: Adventure, MicroEnvironment {}
 }
 
-public struct Sense_of_Intimacy: Immersion, Require_Intimacy {
+public struct Sense_of_Intimacy: Immersion {
     public init() {}
-    
-    var mockings: [MarketItem] = {
-        var tmp = [MarketItem]()
-        tmp.append(ThrowPillow())
-        tmp.append(Cat_Cafe())
-        return tmp
-    }()
-    
-    var publicServices: [PublicService] = {
-        var tmp = [PublicService]()
-        tmp.append(Meetup())
-        return tmp
-    }()
-    
-    var efficiency = Efficiency.terrible
 }
 
 public protocol MicroEnvironment {}

@@ -1,6 +1,18 @@
 import Elo_Itself
 
-struct DeepBreath: IndividualAble {}
+struct DeepBreath: IndividualAble {
+    let items = [
+        "吸气，憋住，呼气"
+    ]
+}
+
+struct 挺胸直腰扩肩: IndividualAble {}
+
+struct Strong_Sensation: IndividualAble, Has_Criterias {
+    var criterias: [Any] = ["Loud", "Dense"]
+}
+
+struct PutHandOnChestOrForehead: IndividualAble {}
 
 struct Mindfulness_Deconstruction: IndividualAble {}
 
@@ -35,6 +47,7 @@ struct Short_Acting_Drug: Resource, IndividualAble {}
 struct Sleep: IndividualAble {
     var resources: [Resource] = {
         var tmp = [Resource]()
+        tmp.append(SleepCycle())
         tmp.append(Pillow())
         tmp.append(Air_Purifying())
         tmp.append(Mattress())
@@ -74,13 +87,11 @@ struct Sail_out: SymbiosisAble, Require_PublicService {
     }()
 }
 
-struct TurnTo_Familiar_and_Accessible: Task, Has_Tasks, Has_Criterias {
+struct TurnTo_Familiar_and_Accessible: Task, Has_Tasks {
     var tasks: [Task] = [
         AppleMusic最爱精选(),
         Drown_In_Content()
     ]
-    
-    var criterias: [Any] = ["Loud", "Dense"]
 }
 
 struct Give_Up: IndividualAble {}

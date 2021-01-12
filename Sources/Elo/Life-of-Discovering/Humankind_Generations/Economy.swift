@@ -1,9 +1,14 @@
 import Elo_Itself
 
+protocol Mockable {
+    var mockings: [MarketItem] {
+        get
+    }
+}
+
 struct Economy: Operable {
     var locality = Locality.unsatisfying
     var circuitry = Circuitry()
-    var cost = Cost(money: .terrible, efforts: .terrible)
     
     var handler: [Task] = {
         var tmp = [Task]()

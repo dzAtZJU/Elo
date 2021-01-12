@@ -9,9 +9,11 @@ struct Thorough_Challenge_Everything: Self_Belief, Affect_Throughput {
 struct Inspirational: Self_Belief {
     struct Love_Task_SocialNetwork: Self_Belief {
         let items = [
-            "No love, no move",
-            "I love, I move"
+            "No love, no move/act",
+            "I love, I move/act"
         ]
+        
+        let outcome = "Mindset Breakthrough"
     }
 }
 

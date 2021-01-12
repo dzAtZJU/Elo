@@ -63,13 +63,17 @@ extension Anxious: Operable, Architectural {
     
     public var handler: [Task] {
         var tmp = [Task]()
-        tmp.append(Dont_Jump())
+        tmp.append(挺胸直腰扩肩())
+        tmp.append(PutHandOnChestOrForehead())
         tmp.append(DeepBreath())
+        tmp.append(Strong_Sensation())
+        tmp.append(AppleMusic())
         tmp.append(Fragrance())
         tmp.append(Coffee())
+        tmp.append(Dont_Jump())
+        tmp.append(Mindfulness_Deconstruction())
         tmp.append(Shower())
         tmp.append(TurnTo_Familiar_and_Accessible())
-        tmp.append(Mindfulness_Deconstruction())
         tmp.append(Dormant())
         tmp.append(Sail_out())
         tmp.append(Short_Acting_Drug())
@@ -110,13 +114,7 @@ extension Curious: Operable {
     }
 }
 
-extension DeadLocking: Operable, Require_PublicService {
-    var publicServices: [PublicService] {
-        var tmp = [PublicService]()
-        tmp.append(Meetup())
-        return tmp
-    }
-    
+extension DeadLocking: Operable {
     var efficiency: Efficiency {
         Efficiency.terrible
     }

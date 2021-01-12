@@ -81,7 +81,6 @@ struct Track: Task, Force {
         
         var efficiency: Efficiency = .terrible
         
-        struct Appannie: PublicService {}
         struct Sumally: PublicService {}
     }
 }

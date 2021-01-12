@@ -16,8 +16,6 @@ struct Get_to_Know: Flow {}
 
 struct Create_Dialogue: Flow {}
 
-struct Encourage: Flow {}
-
 struct Care: Flow {}
 
 struct WorkTask: Flow {}

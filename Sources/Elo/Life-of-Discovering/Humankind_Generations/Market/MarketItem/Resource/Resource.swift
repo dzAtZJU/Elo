@@ -9,7 +9,7 @@ import Elo_Itself
 
 struct Hoodie: Resource {}
 
-struct Hheadscarf: Resource {}
+struct Headscarf: Resource {}
 
 struct ThrowPillow: Resource {
     
@@ -75,9 +75,3 @@ struct Coffee: Resource, IndividualAble {}
 struct Long_Acting_Drug: Resource, MicroEnvironment {}
 
 struct Fragrance: Resource, Task {}
-
-protocol Mockable {
-    var mockings: [MarketItem] {
-        get
-    }
-}
