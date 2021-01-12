@@ -67,6 +67,9 @@ struct Air_Purifying: Resource {}
 
 struct Waist_Cushion: Resource {}
 
+
+struct Diet: Resource, IndividualAble {}
+
 struct Coffee: Resource, IndividualAble {}
 
 struct Long_Acting_Drug: Resource, MicroEnvironment {}

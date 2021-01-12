@@ -92,7 +92,7 @@ struct Shower: IndividualAble {}
 
 struct SkinCare: SelfCare, TimePocket {
     var perspective: Perspective? = Intimate_One()
-    var insertingTasks: [Task] = [Watch_Politics_at_Youtube()]
+    var insertingTasks: [Task] = [Youtube()]
 }
 
 struct Turn_to_Elo: Task, Has_Tasks {

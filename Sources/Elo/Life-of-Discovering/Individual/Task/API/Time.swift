@@ -1,3 +1,4 @@
+import Elo_Itself
 public protocol Time {}
 
 public protocol TimePocket: Time {}

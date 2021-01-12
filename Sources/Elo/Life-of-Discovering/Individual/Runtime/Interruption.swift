@@ -24,10 +24,27 @@ extension Tired: Operable {
     }
 }
 
+extension Depression: Operable {
+    var avoidance: [IndividualAble] {
+        var tmp = [IndividualAble]()
+        tmp.append(Sleep())
+        tmp.append(Diet())
+        return tmp
+    }
+    
+    public var handler: [Task] {
+        var tmp = [Task]()
+        tmp.append(TurnTo_Familiar_and_Accessible())
+        tmp.append(Elo())
+        return tmp
+    }
+}
+
 extension Anxious: Operable, Architectural {
     var avoidance: [IndividualAble] {
         var tmp = [IndividualAble]()
         tmp.append(Control_SocialInvolvement_Rate())
+        tmp.append(Workspace())
         tmp.append(Bedroom())
         tmp.append(Sleep())
         return tmp
@@ -40,6 +57,7 @@ extension Anxious: Operable, Architectural {
     public var cause: [Any] {
         var tmp = [Any]()
         tmp.append(Facing_New())
+        tmp.append(Illusion())
         return tmp
     }
     
@@ -62,8 +80,19 @@ extension Anxious: Operable, Architectural {
     
     struct Facing_New {}
     
-    struct Dont_Jump: Task {}
+    struct Illusion {}
+    
+    struct Dont_Jump: Task, Has_Tasks {
+        var tasks: [Task] = [
+            Aesthetic(),
+            Savour_and_Reliving_and_Lingering_and_Afterglow(),
+        ]
+    }
 }
+
+extension Savour_and_Reliving_and_Lingering_and_Afterglow: Task {}
+
+extension Aesthetic: Task {}
 
 extension Agitated: Operable {
     public var handler: [Task] {
@@ -107,7 +136,7 @@ extension DeadLocking: Operable, Require_PublicService {
 extension Negate_Self: Operable {
     public var handler: [Task] {
         var tmp = [Task]()
-        tmp.append(Watch_Politics_at_Youtube())
+        tmp.append(Youtube())
         tmp.append(Drown_In_Content())
         tmp.append(Cat_Cafe())
         tmp.append(Intimate_One())
@@ -131,3 +160,5 @@ extension Creative_Desire: Require_Immersion {
         [Soul_Condition.Full]
     }
 }
+
+struct Savour_and_Reliving_and_Lingering_and_Afterglow: Emotion {}
