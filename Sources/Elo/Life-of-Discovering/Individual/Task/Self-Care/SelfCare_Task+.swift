@@ -32,6 +32,9 @@ struct Dormant: IndividualAble {
 
 struct Short_Acting_Drug: Resource, IndividualAble {}
 
+// 睡觉前想太多会做梦梦到，做梦会影响睡眠
+// 枕头枕着脖子！
+// 避免在wework睡
 struct Sleep: IndividualAble {
     var resources: [Resource] = {
         var tmp = [Resource]()
