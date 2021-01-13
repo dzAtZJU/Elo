@@ -77,5 +77,12 @@
 
 // research&investigate -> 沉静式阅读
 // 效果 -> 算法
-// 性能 -> 量的管理
+// 性能 -> 量的管理 profile early, continuous, especially after adding new functions
 // 测试 -> 业务逻辑管理
+
+// app榜单通知
+// whatspp 等大公司产品的更新通知
+
+// Hiring Manager
+// Code Quality
+// Product Experience
