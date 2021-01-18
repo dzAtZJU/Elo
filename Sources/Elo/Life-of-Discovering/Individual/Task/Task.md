@@ -76,7 +76,7 @@
 // 不造成他人的烦扰 + 自己的时间 > 他人对我的印象
 
 // research&investigate -> 沉静式阅读
-// 效果 -> 算法
+// 效果 -> 算法  
 // 性能 -> 量的管理 profile early, continuous, especially after adding new functions
 // 测试 -> 业务逻辑管理
 
