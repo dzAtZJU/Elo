@@ -1,10 +1,3 @@
-//
-//  Resource.swift
-//  Elo
-//
-//  Created by Zhou Wei Ran on 2020/9/22.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo_Itself
 
 struct Hoodie: Resource {}
@@ -37,11 +30,13 @@ struct Pillow: Resource, Has_Criterias, Operable {
     
     var handler: [Task] = {
         var tmp = [Task]()
+        tmp.append(枕脖子())
         tmp.append(肩也要枕())
         tmp.append(小腹肌肉())
         return tmp
     }()
     
+    struct 枕脖子: IndividualAble {}
     struct 肩也要枕: IndividualAble {}
     struct 小腹肌肉: IndividualAble {}
 }
@@ -67,7 +62,6 @@ struct Air_Purifying: Resource {}
 
 struct Waist_Cushion: Resource {}
 
-
 struct Diet: Resource, IndividualAble {}
 
 struct Coffee: Resource, IndividualAble {}
@@ -75,3 +69,7 @@ struct Coffee: Resource, IndividualAble {}
 struct Long_Acting_Drug: Resource, MicroEnvironment {}
 
 struct Fragrance: Resource, Task {}
+
+struct 空气净化器: Resource {}
+
+struct 狗皮膏: Resource {}

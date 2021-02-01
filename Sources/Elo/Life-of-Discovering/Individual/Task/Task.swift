@@ -92,7 +92,7 @@ extension Feedly: Predecessor {}
 struct Materials: IsSpectrum {
     var bands: [Any] = [
         Personal(),
-        [文睿(), 江峰(), Medium(), Feedly()],
+        [江峰(), Medium(), Feedly()],
         Friends(),
         Culture()
     ]

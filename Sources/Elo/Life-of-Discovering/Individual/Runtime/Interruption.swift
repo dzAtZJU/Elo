@@ -60,7 +60,7 @@ extension Anxious: Operable, Architectural {
         tmp.append(Illusion())
         return tmp
     }
-    
+        
     public var handler: [Task] {
         var tmp = [Task]()
         tmp.append(挺胸直腰扩肩())

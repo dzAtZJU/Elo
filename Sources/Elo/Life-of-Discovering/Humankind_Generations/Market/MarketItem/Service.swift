@@ -10,3 +10,4 @@ struct Servant: Service, Has_Criterias {
     }
 }
 
+struct Massage: Service {}

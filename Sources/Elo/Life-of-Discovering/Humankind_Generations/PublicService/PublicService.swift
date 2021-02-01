@@ -76,7 +76,9 @@ struct Popular_Net: Require_PublicService {
 
 struct Meetup: PublicService {}
 
-struct Appannie: PublicService {}
+struct Appannie: PublicService {
+    let item = "https://www.appannie.com/cn/apps/mac/top/japan/mac-productivity/"
+}
 
 struct Deepaso: PublicService {}
 
