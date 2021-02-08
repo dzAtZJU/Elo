@@ -19,6 +19,7 @@ struct Economy: Has_Tasks {
     struct Emigrate_to_AnotherEconomy: IndividualAble {}
     struct Entrepreneurship: IndividualAble {}
     
+    // bear://x-callback-url/open-note?id=958E5C2C-E840-4087-BC97-1284A7F0EC52-436-00009A75D81B37F0
     // Start, Study, Live in US, Japan Market
     // Only Make money in China-Mainland Market while wearing mask
 }
