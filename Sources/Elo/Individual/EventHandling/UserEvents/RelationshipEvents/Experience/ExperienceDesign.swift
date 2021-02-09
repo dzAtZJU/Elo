@@ -1,5 +1,5 @@
 // People will recognize all of the hardwork you have invested, they will appreciate your thoughtfulness and care, and they will sense the humanity of you.
-enum InteractionDesign {
+enum ExperienceDesign {
     enum Test {
         case Social = "bear://x-callback-url/open-note?id=A84257A1-CE86-425A-B263-97DF0DA11A7D-436-000065D4B49A99DE"
         case Interview = "bear://x-callback-url/open-note?id=A52951EE-901B-45CA-B4F6-C3140F90549E-7434-000002808D978100"

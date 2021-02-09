@@ -1,4 +1,4 @@
-enum TheHuman {
+enum Humanity {
     enum Need {
         enum Safety_Predictability {
             enum Dealing {
@@ -7,8 +7,8 @@ enum TheHuman {
                 case Visibility
             }
         }
-        case Understanding
         case Beauty_Joy
+        case Understanding
         case Meaning
         case Achieving
         case Knowledege
@@ -16,7 +16,9 @@ enum TheHuman {
     
     enum Behavior {
         case Perceive
-        case ProcessInformatin
+        enum ProcessInformatin {
+            case JustFeelNotRight
+        }
         case MakeDecision
         case Communicate
         
@@ -32,9 +34,5 @@ enum TheHuman {
                 case Surprise
             }
         }
-    }
-        
-    enum Fact {
-        case Busy = "大家都很忙很有目的性，会在礼貌和谐的氛围中，对对方做出判断，哪怕是一个小点不满意也会分手"
     }
 }

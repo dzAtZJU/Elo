@@ -29,3 +29,8 @@ enum Notification {
     case Actionable
     case Respectful_of_their_valuable_time_and_attention
 }
+
+enum Gaming {
+    case Immersive
+    case Simulating
+}

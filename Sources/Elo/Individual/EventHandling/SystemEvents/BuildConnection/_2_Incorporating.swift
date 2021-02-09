@@ -1,28 +1,5 @@
 import Elo_Itself
 
-public struct Semantic_Discrimination: Approach, Task, Has_Drawbacks    {
-    public var drawbacks: [String] = {
-        var tmp = [String]()
-        tmp.append("blind to insidious problems")
-        return tmp
-    }()
-    
-    public init() {}
-    
-    public init(perspectives: [Perspective]) {
-        self.perspectives.append(contentsOf: perspectives)
-    }
-    
-    public var legitimacy: String = ""
-    
-    public var constrainedBy: [Tool] = [YoudaoDict()]
-    
-    public var perspectives: [Perspective] = []
-    
-    struct YoudaoDict: Tool {
-        
-    }
-}
 
 public struct Detach_and_Witness: Approach {
     public init() {}

@@ -53,3 +53,7 @@ public struct Duolingo: App, IndividualAble {
 public struct SleepCycle: App, IndividualAble {
     public init() {}
 }
+
+struct Xcode_and_Swift: Tool {}
+
+struct YoudaoDict: Tool {}
