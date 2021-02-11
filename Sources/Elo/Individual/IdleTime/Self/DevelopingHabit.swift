@@ -1,8 +1,6 @@
 import Elo_Itself
 
-// 睡觉前想太多会做梦梦到，做梦会影响睡眠
-// 避免在wework睡
-//中午才起来
+// bear://x-callback-url/open-note?id=DBEEC32A-3BDD-49D5-8D84-480DB0E7C76A-436-0000FC23070DD6A8
 struct Sleep: DevelopingHabit {
     var resources: [Resource] = {
         var tmp = [Resource]()

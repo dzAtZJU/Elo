@@ -47,7 +47,9 @@ public struct Semantic_Discrimination: Approach, Task {
     public init(perspectives: [Perspective]) {
         self.perspectives.append(contentsOf: perspectives)
     }
-    public var perspectives: [Perspective] = []
+    public var perspectives: [Perspective] = [
+        Mind()
+    ]
     
     public var constrainedBy: [Tool] = [YoudaoDict()]
 }

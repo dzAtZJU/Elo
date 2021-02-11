@@ -14,6 +14,10 @@ enum Humanity {
         case Knowledege
     }
     
+    enum Ability {
+        case Eye = "Scanning"
+    }
+    
     enum Behavior {
         case Perceive
         enum ProcessInformatin {
@@ -34,5 +38,11 @@ enum Humanity {
                 case Surprise
             }
         }
+    }
+    
+    enum Commonality {
+        case Value_and_Attitude
+        case Taste
+        case Temperament
     }
 }

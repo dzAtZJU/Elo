@@ -83,3 +83,10 @@ struct Appannie: PublicService {
 struct Deepaso: PublicService {}
 
 struct Stocks: PublicService {}
+
+enum Education: Int {
+    case Guide = 1
+    case Resource = 2
+    case Spiritually_Nearest_First_Approach = 4
+    case Exposure_Control = 5
+}
