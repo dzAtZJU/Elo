@@ -14,18 +14,21 @@ enum Humanity {
         case Knowledege
     }
     
-    enum Ability {
-        case Eye = "Scanning"
-    }
-    
     enum Behavior {
-        case Perceive
-        enum ProcessInformatin {
-            case JustFeelNotRight
+        enum Perceive {
+            case Visual = "Beauty"
+            case Motion = "Flow"
+            case Sound = "Flow"
         }
+        
+        enum ProcessInformatin {
+            case Feeling = "Just not right"
+            case Taste = "Having seen quality and beautiful things"
+            case Eye = "Scanning"
+        }
+        
         case MakeDecision
         case Communicate
-        
         
         enum OneStep {
             case Extension
@@ -38,6 +41,13 @@ enum Humanity {
                 case Surprise
             }
         }
+    }
+    
+    enum Constraint {
+        enum Scarcity {
+            case Complement = "Movie, Music, Gift"
+        }
+        case Spacing
     }
     
     enum Commonality {

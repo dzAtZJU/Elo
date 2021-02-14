@@ -7,12 +7,13 @@ public struct Way_Of_Project: Approach, Task, Has_Tasks {
         "Unique situations come sparsely, thus recording is nessary."
     }
     
-    public var constrainedBy: [Tool] {
-        [
-            Xcode_and_Swift(),
-            Bear()
-        ]
+    enum ConstrainedBy {
+        case Xcode_and_Swift
+        case Bear
+        case PersonalApp
     }
+    
+    struct PersonalApp: Tool {}
     
     enum Principle: String {
         case Handy = "Allow ideas and memories to flow."
@@ -29,15 +30,20 @@ public struct Way_Of_Project: Approach, Task, Has_Tasks {
     }
     
     public struct Reflection: Task {
-        var startingPoint: [String] = {
-            var tmp = [String]()
-            tmp.append("Flash")
-            tmp.append("Emotion")
-            tmp.append("Feeling")
-            tmp.append("Situation")
-            tmp.append("Enumerate Perspective")
-            return tmp
-        }()
+        enum StartingPoint {
+            enum Flash {
+                case Emotion
+            }
+            
+            enum EnumeratePerspective {
+                case Feeling
+                case Situation
+            }
+        }
+        
+        enum Step {
+            case Describe
+        }
     }
 }
 
